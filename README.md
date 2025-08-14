@@ -21,7 +21,7 @@ A documentação está organizada em diretórios e arquivos Markdown. Você pode
 
 Para começar, você pode acessar os seguintes documentos:
 
-- - [Contexto do Projeto](docs/introducao/contexto.md)
+- [Contexto do Projeto](docs/introducao/contexto.md)
 - [Objetivos do Projeto](docs/introducao/objetivos.md)
 - [Escopo do Projeto](docs/introducao/escopo.md)
 - [Stakeholders](docs/introducao/equipe/stakeholders.md)
