@@ -21,17 +21,17 @@ A documentação está organizada em diretórios e arquivos Markdown. Você pode
 
 Para começar, você pode acessar os seguintes documentos:
 
-- [Contexto do Projeto](docs\introducao\contexto.md)
-- [Objetivos do Projeto](docs\introducao\objetivos.md)
-- [Escopo do Projeto](docs\introducao\escopo.md)
-- [Stakeholders](docs\introducao\equipe\stakeholders.md)
-- [Funções da Equipe](docs\introducao\equipe\funcao_equipe.md)
-- [Orçamento do Projeto](/financeiro/orcamento.md)
-- [Restrições](/riscos_e_dependencias/restricoes.md)
-- [Premissas](/riscos_e_dependencias/premissas.md)
-- [Riscos e Dependências](/riscos_e_dependencias/riscos_e_dependencias.md)
-- [Assinaturas de Aprovação](/aprovacao/assinaturas_aprovacao.md)
-- [Glossário](/glossario.md)
+- - [Contexto do Projeto](docs/introducao/contexto.md)
+- [Objetivos do Projeto](docs/introducao/objetivos.md)
+- [Escopo do Projeto](docs/introducao/escopo.md)
+- [Stakeholders](docs/introducao/equipe/stakeholders.md)
+- [Funções da Equipe](docs/introducao/equipe/funcao_equipe.md)
+- [Orçamento do Projeto](docs/financeiro/orcamento.md)
+- [Restrições](docs/riscos_e_dependencias/restricoes.md)
+- [Premissas](docs/riscos_e_dependencias/premissas.md)
+- [Riscos e Dependências](docs/riscos_e_dependencias/riscos_e_dependencias.md)
+- [Assinaturas de Aprovação](docs/aprovacao/assinaturas_aprovacao.md)
+- [Glossário](docs/glossario.md)
 
 ## Contribuição
 
