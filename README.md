@@ -21,11 +21,11 @@ A documentação está organizada em diretórios e arquivos Markdown. Você pode
 
 Para começar, você pode acessar os seguintes documentos:
 
-- [Contexto do Projeto](/introducao/contexto.md)
-- [Objetivos do Projeto](/introducao/objetivos.md)
-- [Escopo do Projeto](/introducao/escopo.md)
-- [Stakeholders](/equipe/stakeholders.md)
-- [Funções da Equipe](/equipe/funcoes_equipe.md)
+- [Contexto do Projeto](docs\introducao\contexto.md)
+- [Objetivos do Projeto](docs\introducao\objetivos.md)
+- [Escopo do Projeto](docs\introducao\escopo.md)
+- [Stakeholders](docs\introducao\equipe\stakeholders.md)
+- [Funções da Equipe](docs\introducao\equipe\funcao_equipe.md)
 - [Orçamento do Projeto](/financeiro/orcamento.md)
 - [Restrições](/riscos_e_dependencias/restricoes.md)
 - [Premissas](/riscos_e_dependencias/premissas.md)
