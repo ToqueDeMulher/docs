@@ -31,6 +31,18 @@ Para medir o sucesso do projeto, utilizaremos os seguintes benchmarks:
 *   **Painel Administrativo:** CRUD de produtos, gestão de estoque e fornecedores.
 *   **Automação:** Lógica de atualização de estoque automática pós-venda.
 
+## ✅ Atualização de Implementação em 10 de março de 2026
+
+Com base no código atualmente versionado, já foram concluídos ou fortalecidos os seguintes pontos no backend:
+
+*   **Produtos:** estrutura principal do módulo de produtos, criação de produto e upload de imagens.
+*   **Configuração:** proteção de `.env`, adição de `.env.example` e documentação das variáveis de ambiente.
+*   **Validação:** bloqueio de valores negativos, validação de e-mail de fornecedor e limite de tamanho para upload.
+*   **Persistência:** inclusão de constraints, índices em foreign keys e `rollback` explícito em falhas de escrita.
+*   **Compatibilidade:** substituição de `datetime.utcnow()` por timestamps UTC com timezone.
+
+> Status detalhado disponível em `Introdução > Status Atual`.
+
 ### Fase 3: Experiência do Cliente e Conversão (Mar - Abr 2026)
 *   **E-commerce:** Catálogo responsivo, filtros avançados e busca otimizada.
 *   **Checkout:** Integração com Gateways de Pagamento e cálculo de frete.

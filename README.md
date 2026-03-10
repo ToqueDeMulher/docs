@@ -24,8 +24,10 @@ Para começar, você pode acessar os seguintes documentos:
 - [Contexto do Projeto](docs/introducao/contexto.md)
 - [Objetivos do Projeto](docs/introducao/objetivos.md)
 - [Escopo do Projeto](docs/introducao/escopo.md)
-- [Stakeholders](docs/introducao/equipe/stakeholders.md)
-- [Funções da Equipe](docs/introducao/equipe/funcao_equipe.md)
+- [Status Atual da Implementação](docs/introducao/status_atual.md)
+- [Roadmap](docs/roadmap.md)
+- [Stakeholders](docs/equipe/stakeholders.md)
+- [Funções da Equipe](docs/equipe/funcao_equipe.md)
 - [Orçamento do Projeto](docs/financeiro/orcamento.md)
 - [Restrições](docs/riscos_e_dependencias/restricoes.md)
 - [Premissas](docs/riscos_e_dependencias/premissas.md)
@@ -39,4 +41,4 @@ Para contribuir com a documentação, por favor, siga as diretrizes de contribui
 
 ---
 
-*Última atualização: 14 de agosto de 2025*
+*Última atualização: 10 de março de 2026*

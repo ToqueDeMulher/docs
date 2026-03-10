@@ -2,9 +2,11 @@
   - [Contexto](/introducao/contexto.md)
   - [Objetivos](/introducao/objetivos.md)
   - [Escopo](/introducao/escopo.md)
+  - [Status Atual](/introducao/status_atual.md)
+- [Roadmap](/roadmap.md)
 - [Equipe](/equipe/stakeholders.md)
   - [Stakeholders](/equipe/stakeholders.md)
-  - [Funções da Equipe](/equipe/funcoes_equipe.md)
+  - [Funções da Equipe](/equipe/funcao_equipe.md)
 - [Financeiro](/financeiro/orcamento.md)
   - [Orçamento](/financeiro/orcamento.md)
 - [Riscos e Dependências](/riscos_e_dependencias/restricoes.md)
@@ -14,5 +16,3 @@
 - [Aprovação](/aprovacao/assinaturas_aprovacao.md)
   - [Assinaturas de Aprovação](/aprovacao/assinaturas_aprovacao.md)
 - [Glossário](/glossario.md)
-
-
