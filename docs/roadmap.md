@@ -1,62 +1,79 @@
-# Roadmap Estratégico: Plataforma Toque de Mulher
+# Roadmap Estratégico
 
-Este documento detalha o plano de implementação para a transição digital da loja "Toque de Mulher", focado em automação e expansão de mercado.
+Este roadmap consolida o plano-base do projeto com o documento de futuro de 2026 e com o estado real do código. A prioridade correta é: **fechar o MVP**, depois **melhorar conversão e experiência**, e só então **escalar com diferenciais avançados**.
 
-## 🎯 Objetivos de Negócio
+## Objetivos permanentes
 
-| Objetivo | Meta | Impacto Esperado |
-| :--- | :--- | :--- |
-| **Excelência Operacional** | Redução de 80% no tempo manual | Maior foco em crescimento estratégico. |
-| **Expansão de Mercado** | Alcance Nacional | Aumento do mercado endereçável. |
-| **Diversificação de Receita** | Novo Canal Digital | Resiliência e escalabilidade do negócio. |
-| **Fortalecimento de Marca** | Autoridade Online | Fidelização e percepção de qualidade premium. |
+| Objetivo | Meta |
+| :--- | :--- |
+| Excelência operacional | Redução de até 80% do trabalho manual |
+| Expansão de mercado | Alcance regional e nacional |
+| Diversificação de receita | Canal digital ativo e escalável |
+| Fortalecimento de marca | Presença online confiável e premium |
 
-## 📈 Indicadores-Chave de Desempenho (KPIs)
+## Fase 0: Situação atual do código
 
-Para medir o sucesso do projeto, utilizaremos os seguintes benchmarks:
+O snapshot atual já mostra base para o MVP, mas ainda incompleta:
 
-*   **Taxa de Conversão:** Meta > 2,0% (Benchmark do setor de beleza com automação).
-*   **Abandono de Carrinho:** Meta < 75% (Média brasileira é de ~80%).
-*   **Eficiência:** Redução de até 80% no tempo de processos manuais.
-*   **Crescimento:** Aumento mensal de receita online esperado de ≥ 10%.
+- frontend com catálogo, carrinho, checkout, páginas institucionais, área administrativa e gamificação;
+- backend com produtos, criação de usuário e preferência de pagamento;
+- desalinhamentos entre contratos de API, autenticação e fluxo de pedido.
 
-## 🗺️ Fases de Implementação
+## Fase 1: Consolidação do MVP
 
-### Fase 1: Fundação e Infraestrutura (Fev 2026)
-*   Setup do ambiente React + Node.js.
-*   Configuração de CI/CD e ambientes de staging/produção.
-*   Implementação de Autenticação Segura (JWT).
+Prioridade máxima antes de qualquer expansão funcional.
 
-### Fase 2: Excelência Operacional (Mar 2026)
-*   **Painel Administrativo:** CRUD de produtos, gestão de estoque e fornecedores.
-*   **Automação:** Lógica de atualização de estoque automática pós-venda.
+- alinhar contratos entre frontend e backend;
+- conectar catálogo público à API real;
+- finalizar cadastro, login, perfil e sessão autenticada;
+- registrar pedidos, integrar checkout e baixa automática de estoque;
+- concluir gestão administrativa de produtos, fornecedores, pedidos e relatórios;
+- estabilizar webhook e conciliação de pagamento.
 
-## ✅ Atualização de Implementação em 10 de março de 2026
+## Fase 2: Experiência e conversão
 
-Com base no código atualmente versionado, já foram concluídos ou fortalecidos os seguintes pontos no backend:
+Evolução direta do MVP para melhorar usabilidade e taxa de compra.
 
-*   **Produtos:** estrutura principal do módulo de produtos, criação de produto e upload de imagens.
-*   **Configuração:** proteção de `.env`, adição de `.env.example` e documentação das variáveis de ambiente.
-*   **Validação:** bloqueio de valores negativos, validação de e-mail de fornecedor e limite de tamanho para upload.
-*   **Persistência:** inclusão de constraints, índices em foreign keys e `rollback` explícito em falhas de escrita.
-*   **Compatibilidade:** substituição de `datetime.utcnow()` por timestamps UTC com timezone.
+- dark mode e temas dinâmicos;
+- microinterações com feedback de ação;
+- skeleton screens e melhoria da percepção de performance;
+- galeria de produtos com mídia rica, zoom e melhor apresentação visual;
+- SEO técnico e refinamento responsivo.
 
-> Status detalhado disponível em `Introdução > Status Atual`.
+## Fase 3: Diferenciação em Beauty Tech
 
-### Fase 3: Experiência do Cliente e Conversão (Mar - Abr 2026)
-*   **E-commerce:** Catálogo responsivo, filtros avançados e busca otimizada.
-*   **Checkout:** Integração com Gateways de Pagamento e cálculo de frete.
-*   **SEO:** Otimização fundamental para motores de busca.
+Recursos planejados para sair do modelo de catálogo básico.
 
-### Fase 4: Inteligência de Negócio (Abr 2026)
-*   **Dashboard:** Visualização de KPIs e relatórios de vendas.
-*   **Exportação:** Relatórios em PDF/Excel para contabilidade e gestão.
+- `routine builder` para montar rotinas personalizadas;
+- comparador inteligente de produtos por acabamento, ativos e atributos;
+- wishlist social compartilhável;
+- avaliações com foto e vídeo;
+- integração da gamificação atual com dados reais de uso e compra.
 
-## 👥 Equipe e Responsabilidades
+## Fase 4: Retenção e fidelização
 
-*   **Infraestrutura & Backend:** @Marichoii, @Jpzin1
-*   **Admin & Gestão:** @GuHenriquee, @joaodelabio
-*   **Frontend & UX:** @ccarolmdlima, @Zouares
+- programa de fidelidade em níveis;
+- benefícios progressivos por recorrência e ticket;
+- gatilhos de progresso no carrinho e no perfil;
+- notificações para promoção, reposição de estoque e listas de desejo.
 
----
-*Última atualização baseada no Plano de Projeto v2.*
+## Fase 5: Escala, performance e confiança
+
+- PWA com instalabilidade, cache e uso offline;
+- arquitetura API-first/headless para expansão de canais;
+- busca avançada com tolerância a erro e autocomplete visual;
+- painel de privacidade LGPD com consentimento granular;
+- tokenização de pagamento e reforço de segurança;
+- observabilidade e dashboard operacional.
+
+## KPIs para acompanhamento
+
+- taxa de conversão acima de `2,0%`;
+- abandono de carrinho abaixo de `75%`;
+- crescimento mensal da receita online de pelo menos `10%`;
+- redução do esforço manual de até `80%`;
+- evolução de retenção, AOV e LTV nas fases de fidelização.
+
+## Regra de priorização
+
+Nenhum recurso de diferenciação deve entrar na frente de problemas básicos de integração, autenticação, catálogo, pedido ou pagamento. O roadmap futuro só faz sentido quando o MVP estiver consistente de ponta a ponta.

@@ -1,7 +1,9 @@
 # Premissas do Projeto
 
-As premissas para o desenvolvimento do projeto são:
+As premissas adotadas para o desenvolvimento do projeto são:
 
-*   Toda a equipe estará alinhada quanto às tecnologias e métodos utilizados.
-*   O cliente fornecerá feedbacks claros e objetivos (levantamento de requisitos).
-*   Será mantido um canal de comunicação ativo entre os stakeholders.
+- a cliente continuará disponível para validar requisitos, entregas e prioridades;
+- a equipe manterá comunicação contínua e registro centralizado das decisões;
+- o MVP será conduzido com foco em funcionalidades de maior impacto operacional e comercial;
+- ferramentas de versionamento, design, documentação e cloud continuarão acessíveis para a equipe;
+- qualquer divergência entre planejamento e código será explicitada na documentação em vez de ser omitida.

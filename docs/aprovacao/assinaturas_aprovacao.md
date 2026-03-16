@@ -1,25 +1,22 @@
 # Assinaturas de Aprovação
 
-Este documento serve como registro das aprovações formais do projeto Toque de Mulher pelos principais stakeholders.
+Este documento consolida os papéis de aprovação formal previstos para o projeto Toque de Mulher.
 
 ---
 
 **Láercia Holanda**
-
 *Cliente*
 
 ---
 
 **Láercia Holanda**
-
-*Patrocinador*
+*Patrocinadora*
 
 ---
 
 **Maria Eduarda de Moura Eguchi**
-
 *Gerente do Projeto*
 
 ---
 
-
+As aprovações registradas aqui representam o alinhamento executivo esperado para escopo, prioridades e entrega do MVP.

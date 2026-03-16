@@ -1,81 +1,66 @@
 # Status Atual da Implementação
 
-Este documento registra o estado atual do projeto com base nas alterações implementadas no backend até **10 de março de 2026**.
+Este documento registra o estado do código versionado em **16 de março de 2026** e cruza o planejamento do projeto com o que realmente existe no repositório hoje.
 
 ## Resumo executivo
 
-No snapshot atual do código, a parte backend versionada está concentrada principalmente no módulo de produtos. As mudanças mais recentes foram focadas em segurança, validação de dados, consistência temporal e robustez de persistência.
+O projeto já possui frontend navegável e backend funcional para partes do fluxo comercial, mas o MVP ainda está **parcial**. Há recursos importantes implementados visualmente no frontend e serviços relevantes no backend, porém ainda existem desalinhamentos entre contratos, rotas e responsabilidades dos dois lados.
 
-## O que já foi feito
+## Arquitetura efetiva do snapshot
 
-### Backend de produtos
+- **Frontend:** `React 18`, `TypeScript`, `Vite`, `React Router` e componentes próprios.
+- **Backend:** `FastAPI` com `SQLModel`, CORS configurado, upload de imagens e integração com Mercado Pago.
+- **Persistência:** criação de tabelas no startup da aplicação; imagens enviadas para Supabase.
 
-- estruturação do módulo de produtos com rotas, schemas, models e services
-- endpoint para criação de produto
-- endpoint para upload de imagem de produto
-- geração de `slug` único para produtos
-- integração de upload com Supabase
+> Observação importante: os documentos de planejamento citam `React + Node.js` como direção tecnológica, mas o código versionado hoje usa `React + FastAPI/Python`.
 
-### Segurança e configuração
+## O que já está implementado
 
-- proteção de `.env` e variações locais no versionamento
-- criação de arquivo base seguro para configuração com `.env.example`
-- criação de `.env` local a partir do arquivo de exemplo
-- documentação das variáveis obrigatórias de ambiente
+### Frontend
 
-### Qualidade e compatibilidade
+- home, catálogo por categoria e página de produto;
+- carrinho e checkout em etapas (`endereço`, `pagamento`, `confirmação`);
+- login, perfil e páginas institucionais;
+- dashboard administrativo e tela de cadastro de produto;
+- páginas de gamificação (`missões` e `ranking`);
+- persistência local de carrinho com `localStorage`.
 
-- substituição do uso de `datetime.utcnow()` por helper UTC com timezone
-- padronização do uso de timestamps UTC nos modelos alterados
+### Backend
 
-### Validações adicionadas
+- inicialização da API com CORS e arquivos estáticos;
+- criação de produto com supplier, brand, description, categories, stock e imagens;
+- upload de imagem de produto com validação de tipo;
+- geração de preferência de pagamento com Mercado Pago;
+- criação de usuário;
+- webhook de pagamento presente em arquivo, mas ainda não acoplado ao `app.main`.
 
-- bloqueio de preços negativos
-- bloqueio de quantidades negativas
-- bloqueio de ordem de imagem inválida
-- validação de e-mail de fornecedor
-- validação de tipo de arquivo de imagem
-- validação de tamanho máximo de upload por variável de ambiente
+## O que está parcial ou desalinhado
 
-### Persistência e banco de dados
+- o frontend de autenticação consome rotas como `/auth/login`, `/auth/register` e `/users/me`, mas o backend montado hoje expõe apenas `/user/createUser`;
+- existe um arquivo de login no backend, porém ele não está registrado em `app/main.py`;
+- o frontend envia upload para `/products/{id}/images`, enquanto o backend publica `/products/{product_id}/images/upload`;
+- o payload de criação de produto no frontend não segue o schema de `CreateProductRequest` do backend;
+- o catálogo público do frontend ainda usa dados locais em `src/shared/data/catalog-products.ts`, e não leitura dinâmica da API;
+- checkout, pedido e baixa automática de estoque ainda não aparecem como fluxo persistido de ponta a ponta;
+- relatórios, gestão de pedidos e painel administrativo completo continuam pendentes no backend.
 
-- adição de `CheckConstraint` para impedir valores inválidos
-- adição de índices em chaves estrangeiras usadas em joins e consultas
-- `rollback` explícito em falhas de criação de produto
-- `rollback` explícito em falhas de persistência de imagem
+## Recursos previstos mas ainda não implementados
 
-## O que foi documentado e validado
+Os itens abaixo aparecem nos planos de projeto e permanecem como backlog:
 
-- atualização da documentação de configuração do backend
-- documentação do limite de upload de imagens
-- documentação das respostas de erro do endpoint de upload
-- validação sintática dos módulos alterados com compilação Python
-- verificação do diff para evitar erros básicos de formatação
-
-## Situação atual do escopo implementado
-
-Hoje o código versionado evidencia principalmente:
-
-- catálogo e cadastro de produtos
-- estoque relacionado ao produto
-- upload e ordenação de imagens
-- modelos centrais de banco
-- configuração de ambiente e CORS
-
-## Pontos ainda não encontrados neste snapshot
-
-Durante a revisão do código disponível, não foram encontrados módulos completos implementados para:
-
-- checkout completo
-- fluxo completo de pagamento
-- fechamento de pedido com baixa automática de estoque
-- autenticação com ajuste de bcrypt
-- busca de produtos com lógica própria vulnerável a SQL injection
-
-Esses pontos continuam relevantes para o projeto, mas dependem da presença do código correspondente no repositório para documentação técnica mais detalhada e correções diretas.
+- busca avançada e fuzzy search;
+- rotina personalizada de produtos (`routine builder`);
+- comparador inteligente de produtos;
+- wishlist social e notificações de interesse;
+- programa de fidelidade por níveis;
+- avaliações com foto e vídeo;
+- PWA, modo offline e notificações push;
+- painel de privacidade e consentimento LGPD granular.
 
 ## Próximos passos recomendados
 
-- adicionar migrações formais de banco em vez de depender apenas de `create_all`
-- expandir a documentação técnica dos módulos backend conforme novas rotas forem versionadas
-- registrar explicitamente os fluxos de carrinho, pedido, pagamento e autenticação quando esses módulos entrarem no repositório
+- alinhar contratos entre frontend e backend antes de ampliar o escopo;
+- conectar catálogo, autenticação e checkout à API real;
+- registrar e finalizar o fluxo de pedidos, webhook e baixa de estoque;
+- substituir `create_all` por migrações formais de banco;
+- usar o roadmap para priorizar primeiro a consolidação do MVP e só depois os diferenciais de experiência.

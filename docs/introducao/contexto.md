@@ -1,7 +1,30 @@
 # Contexto do Projeto
 
-Toque de Mulher é uma loja de cosméticos especializada na venda de perfumes importados originais e maquiagens. O projeto está sendo desenvolvido em resposta à necessidade do cliente de estabelecer uma presença digital para sua empresa.
+Toque de Mulher é uma loja de cosméticos com foco em perfumes importados, maquiagem e itens de curadoria. O projeto nasce da necessidade de transformar uma operação ainda muito dependente do atendimento físico e de processos manuais em uma plataforma digital capaz de sustentar crescimento.
 
-O objetivo principal é automatizar processos de venda e atendimento, com meta de reduzir em até 80% o tempo atualmente dedicado a tarefas operacionais na loja física. Essa otimização permitirá que o cliente e sua equipe foque em atividades estratégicas e de maior valor agregado. Atualmente, o alcance comercial do cliente está limitado à sua localização física, o que restringe o volume de vendas e dificulta a aquisição de novos clientes. O projeto tem como propósito expandir esse alcance para uma audiência regional, nacional e, se viável, internacional, por meio de canais digitais que possibilitem novas oportunidades de receita e fortalecimento da marca.
+## Justificativa de negócio
 
-A criação de um site representa uma iniciativa estratégica voltada à diversificação dos canais de vendas, ampliação da base de clientes, ganho de eficiência operacional e posicionamento mais competitivo no mercado digital.
+Os documentos-base do projeto convergem em três pontos:
+
+- a operação atual consome até 80% do tempo da equipe com tarefas manuais, como controle de vendas, estoque e atendimento;
+- o alcance comercial da loja ainda está concentrado no espaço físico, o que limita aquisição de clientes e escala;
+- o mercado brasileiro de beleza e e-commerce segue em expansão, criando janela clara para presença digital estruturada.
+
+## Oportunidade estratégica
+
+A plataforma digital proposta responde a duas frentes ao mesmo tempo:
+
+- **eficiência operacional**, ao automatizar cadastro, estoque, pagamentos e acompanhamento do negócio;
+- **expansão comercial**, ao criar um canal online para ampliar o alcance da marca em nível regional e nacional.
+
+## Posicionamento desejado
+
+O projeto não busca apenas "colocar a loja na internet". A meta é posicionar a Toque de Mulher como uma referência confiável em cosméticos originais, com experiência de compra organizada, catálogo bem apresentado e capacidade de evolução para recursos mais avançados de retenção e personalização.
+
+## Base desta documentação
+
+Esta seção foi consolidada principalmente a partir de:
+
+- `Plano de Projeto - 2025`
+- `Plano de Projeto Cliente`
+- `Plano de Futuro e Otimização - 2026`

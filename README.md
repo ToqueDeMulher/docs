@@ -1,31 +1,29 @@
 # Documentação do Projeto Toque de Mulher
 
-Este repositório contém toda a documentação relevante para o projeto Toque de Mulher, incluindo informações sobre a organização, o projeto em si, e detalhes técnicos. O objetivo é manter todas as informações de forma organizada, acessível e profissional.
+Este repositório concentra a documentação executiva e funcional do projeto Toque de Mulher. O conteúdo foi consolidado a partir dos arquivos `Plano de Projeto - 2025`, `Plano de Projeto Cliente` e `Plano de Futuro e Otimização - 2026`, com complemento do estado real do código versionado em **16 de março de 2026**.
 
-## Como Navegar na Documentação
+## Visão Geral
 
-A documentação está organizada em diretórios e arquivos Markdown. Você pode navegar através da estrutura de pastas ou, se estiver usando uma ferramenta de visualização de documentação (como Docsify), utilizar a barra lateral de navegação.
+A documentação principal fica em `docs/` e está organizada por tema:
 
-## Estrutura do Repositório
+- `introducao/`: contexto de negócio, objetivos, escopo do MVP e status técnico atual.
+- `roadmap.md`: evolução planejada do MVP até as otimizações futuras.
+- `equipe/`: stakeholders, papéis e responsabilidades.
+- `financeiro/`: visão de orçamento do MVP e custos operacionais esperados.
+- `riscos_e_dependencias/`: restrições, premissas, riscos e dependências críticas.
+- `aprovacao/`: registro consolidado de aprovação.
+- `glossario.md`: termos do projeto, negócio e arquitetura.
+- `contributing.md`: regras para manter a documentação alinhada com planos e código.
 
-- **`docs/`**: Contém todos os arquivos de documentação.
-  - **`introducao/`**: Contexto, objetivos e escopo do projeto.
-  - **`equipe/`**: Informações sobre os stakeholders e funções da equipe.
-  - **`financeiro/`**: Detalhes sobre o orçamento do projeto.
-  - **`riscos_e_dependencias/`**: Restrições, premissas, riscos e dependências.
-  - **`aprovacao/`**: Assinaturas de aprovação.
-  - **`_sidebar.md`**: Define a estrutura da barra lateral de navegação.
-  - **`glossario.md`**: Glossário de termos específicos do projeto.
+## Como Consultar
 
-## Conteúdo Principal
+Os documentos principais podem ser acessados pelos links abaixo:
 
-Para começar, você pode acessar os seguintes documentos:
-
-- [Contexto do Projeto](docs/introducao/contexto.md)
-- [Objetivos do Projeto](docs/introducao/objetivos.md)
-- [Escopo do Projeto](docs/introducao/escopo.md)
+- [Contexto e Justificativa](docs/introducao/contexto.md)
+- [Objetivos Estratégicos e KPIs](docs/introducao/objetivos.md)
+- [Escopo do MVP](docs/introducao/escopo.md)
 - [Status Atual da Implementação](docs/introducao/status_atual.md)
-- [Roadmap](docs/roadmap.md)
+- [Roadmap Estratégico](docs/roadmap.md)
 - [Stakeholders](docs/equipe/stakeholders.md)
 - [Funções da Equipe](docs/equipe/funcao_equipe.md)
 - [Orçamento do Projeto](docs/financeiro/orcamento.md)
@@ -35,10 +33,32 @@ Para começar, você pode acessar os seguintes documentos:
 - [Assinaturas de Aprovação](docs/aprovacao/assinaturas_aprovacao.md)
 - [Glossário](docs/glossario.md)
 
+## Estrutura do Repositório
+
+```text
+.
+|-- LICENSE
+|-- README.md
+`-- docs
+    |-- _sidebar.md
+    |-- aprovacao
+    |-- contributing.md
+    |-- equipe
+    |-- financeiro
+    |-- glossario.md
+    |-- introducao
+    |-- riscos_e_dependencias
+    `-- roadmap.md
+```
+
+## Nota de Consolidação
+
+Esta documentação substitui materiais redundantes mantidos fora da estrutura principal. O objetivo é manter uma única fonte de verdade para estratégia, escopo e acompanhamento do projeto.
+
 ## Contribuição
 
-Para contribuir com a documentação, por favor, siga as diretrizes de contribuição (a serem adicionadas posteriormente) e envie suas alterações através de um Pull Request.
+As diretrizes de contribuição estão em [Guia de Contribuição](docs/contributing.md).
 
 ---
 
-*Última atualização: 10 de março de 2026*
+*Última atualização: 16 de março de 2026*
