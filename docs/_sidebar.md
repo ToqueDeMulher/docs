@@ -4,6 +4,7 @@
   - [Escopo do MVP](/introducao/escopo.md)
   - [Status Atual](/introducao/status_atual.md)
 - [Roadmap Estratégico](/roadmap.md)
+- [Acompanhamento das Sprints](/sprints.md)
 - [Equipe](/equipe/stakeholders.md)
   - [Stakeholders](/equipe/stakeholders.md)
   - [Funções da Equipe](/equipe/funcao_equipe.md)
