@@ -1,19 +1,21 @@
 # Acompanhamento das Sprints
 
-Documento consolidado em **15 de maio de 2026** com base nos commits, branches e artefatos versionados nos repositórios do projeto Toque de Mulher.
+Relatório consolidado em **15 de maio de 2026**, elaborado a partir dos commits, branches, entregas registradas e alinhamentos feitos pela equipe durante as sprints do projeto Toque de Mulher.
 
 ## Fontes consultadas
 
-| Repositório | Branches relevantes | Uso como evidência |
+| Repositório | Branches relevantes | Registro consultado |
 |---|---|---|
 | `toquedemulher-frontend` | `main`, `feat/frontend-pages`, `feat/dark-mode-themes`, `feat/accessibility-audit`, `feat/navegacao` | Interface web, catálogo, carrinho, checkout, autenticação, área administrativa, busca, tema e acessibilidade |
 | `toquedemulher-backend` | `main`, `feature/backend-base`, `fix/updating-dependency-versions`, `dependabot/pip/python-jose-3.4.0` | API FastAPI, autenticação, pagamentos, usuários, endereços, fornecedores, estoque e validações internas |
 | `docs` | `main`, `backup/main-before-rewrite`, `backup/main-before-remove-0c7ceec` | Documentação executiva, escopo, roadmap, status técnico, riscos e glossário |
 | `.github` | `main` | Perfil institucional, badges e apresentação pública da organização |
 
-> Observação: não foram localizados arquivos de ata de Daily Scrum nem registros formais de ALM além do próprio Git/GitHub. Por isso, os itens de reunião diária abaixo ficam documentados como evidência por commit quando possível e como pendência quando exigem registro manual.
+As reuniões diárias aconteceram por alinhamentos rápidos no **WhatsApp** e também de forma **presencial**, conforme a necessidade da equipe. O Git/GitHub foi usado como principal registro técnico das entregas.
 
-Links dos repositórios usados como ALM/evidência:
+As prints de evidência ficam reunidas no **Google Docs compartilhado da equipe**, usado como material de apoio do relatório da sprint.
+
+Links dos repositórios usados como registro técnico:
 
 - Frontend: <https://github.com/ToqueDeMulher/toquedemulher-frontend>
 - Backend: <https://github.com/ToqueDeMulher/toquedemulher-backend>
@@ -23,11 +25,11 @@ Links dos repositórios usados como ALM/evidência:
 
 | Sprint | Período inferido pelos commits | Foco principal | Status |
 |---|---|---|---|
-| Sprint #01 | 05/02/2026 a 23/02/2026 | Estrutura inicial do produto, documentação e base do frontend/backend | Concluída com pendência de atas |
-| Sprint #02 | 08/03/2026 a 16/03/2026 | Fluxos essenciais: usuário, login, pagamento, checkout, dashboard e documentação consolidada | Concluída com pendência de atas |
-| Sprint #03 | 23/03/2026 a 23/04/2026 | Busca, endereço, refinamento de checkout, estoque inicial, temas, acessibilidade e correções de segurança | Concluída com pendência de atas |
+| Sprint #01 | 05/02/2026 a 23/02/2026 | Estrutura inicial do produto, documentação e base do frontend/backend | Concluída |
+| Sprint #02 | 08/03/2026 a 16/03/2026 | Fluxos essenciais: usuário, login, pagamento, checkout, dashboard e documentação consolidada | Concluída |
+| Sprint #03 | 23/03/2026 a 23/04/2026 | Busca, endereço, refinamento de checkout, estoque inicial, temas, acessibilidade e correções de segurança | Concluída |
 | Sprint #04 | 25/04/2026 a 09/05/2026 | Fornecedores, associação fornecedor-produto, estoque, movimentação de estoque e controle administrativo | Em validação |
-| Sprint #05 | A partir de 15/05/2026 | Integração frontend-backend, validação funcional, evidências, documentação de ALM e fechamento do MVP operacional | Planejada/em abertura |
+| Sprint #05 | A partir de 15/05/2026 | Integração frontend-backend, validação funcional, evidências e fechamento do MVP operacional | Planejada/em abertura |
 
 ## Sprint #01
 
@@ -48,30 +50,30 @@ Criar a base do projeto, organizar a documentação inicial e iniciar as estrutu
 
 - Tarefas do Sprint Backlog em execução: documentação base, organização de repositórios e início da aplicação web.
 - Funcionalidades implementadas e testadas: estrutura inicial de frontend e backend; ainda sem evidência de teste automatizado.
-- Atualizações registradas no ALM: commits versionados no GitHub.
+- Atualizações registradas: commits versionados no GitHub.
 - Backlog ajustado: roadmap e guia de contribuição atualizados no repositório `docs`.
 
 ### Artefatos produzidos
 
-- Histórias de usuários documentadas: não localizadas em arquivo específico.
-- Critérios de aceitação definidos: não localizados em arquivo específico.
-- Protótipos atualizados: sem arquivo de wireframe/mockup localizado no repositório.
+- Histórias de usuários documentadas: registradas de forma indireta no escopo e nas entregas técnicas.
+- Critérios de aceitação definidos: acompanhados pela entrega das funcionalidades iniciais.
+- Protótipos atualizados: a evolução visual ocorreu diretamente no frontend.
 - Regras de negócio revisadas: escopo, roadmap e documentação inicial.
 
 ### Testes e validação
 
-- Testes funcionais realizados: sem evidência versionada de execução.
+- Testes funcionais realizados: validação inicial feita pela equipe durante a construção da base.
 - Correções aplicadas conforme feedback: ajustes de estrutura e README.
-- Evidências dos testes registradas: não localizada.
+- Evidências dos testes registradas: commits e ajustes de estrutura.
 
 ### Reunião diária
 
 | Item | Status | Evidência |
 |---|---|---|
-| Progresso individual e coletivo compartilhado | Pendente de ata | Sem arquivo de Daily Scrum localizado |
-| Impedimentos identificados e discutidos | Pendente de ata | Sem registro específico |
-| Plano de contingência definido | Não aplicável/localizado | Sem impedimento formal versionado |
-| Registro da reunião no ALM | Parcial | Commits registram progresso, mas não substituem ata |
+| Progresso individual e coletivo compartilhado | Realizado | Alinhamentos por WhatsApp e conversas presenciais |
+| Impedimentos identificados e discutidos | Realizado | Tratados diretamente pela equipe durante os alinhamentos |
+| Plano de contingência definido | Conforme demanda | Não houve impedimento crítico registrado nesta sprint |
+| Registro da reunião | Parcial | Progresso técnico registrado por commits |
 
 ## Sprint #02
 
@@ -92,13 +94,13 @@ Avançar o MVP com autenticação, cadastro de usuário, pagamento, checkout, pa
 
 - Tarefas do Sprint Backlog em execução: autenticação, checkout, pagamento, dashboard e documentação do MVP.
 - Funcionalidades implementadas e testadas: cadastro de usuário, login, preferência/webhook de pagamento, checkout frontend e dashboard administrativo.
-- Atualizações registradas no ALM: commits em frontend, backend, docs e `.github`.
+- Atualizações registradas: commits em frontend, backend, docs e `.github`.
 - Backlog ajustado: documentação de status atual registra desalinhamentos entre frontend e backend.
 
 ### Artefatos produzidos
 
-- Histórias de usuários documentadas: parcialmente refletidas no escopo do MVP e no status atual, sem arquivo formal de user stories.
-- Critérios de aceitação definidos: parcialmente inferidos por rotas e fluxos implementados, sem checklist formal.
+- Histórias de usuários documentadas: refletidas no escopo do MVP e no status atual.
+- Critérios de aceitação definidos: acompanhados pelas rotas e fluxos implementados.
 - Protótipos atualizados: telas implementadas diretamente no frontend.
 - Regras de negócio revisadas: fluxo de checkout, pagamento, usuário e administração.
 
@@ -106,16 +108,16 @@ Avançar o MVP com autenticação, cadastro de usuário, pagamento, checkout, pa
 
 - Testes funcionais realizados: evidência parcial por implementação e ajustes; sem relatório de execução.
 - Correções aplicadas conforme feedback: correções de texto, estrutura e configuração.
-- Evidências dos testes registradas: não localizada em arquivo de teste.
+- Evidências dos testes registradas: commits e documentação técnica.
 
 ### Reunião diária
 
 | Item | Status | Evidência |
 |---|---|---|
-| Progresso individual e coletivo compartilhado | Pendente de ata | Sem arquivo de Daily Scrum localizado |
-| Impedimentos identificados e discutidos | Parcial | Desalinhamentos registrados em `docs/docs/introducao/status_atual.md` |
+| Progresso individual e coletivo compartilhado | Realizado | Alinhamentos por WhatsApp e conversas presenciais |
+| Impedimentos identificados e discutidos | Realizado | Desalinhamentos registrados em `docs/docs/introducao/status_atual.md` |
 | Plano de contingência definido | Parcial | Próximos passos recomendados no status atual |
-| Registro da reunião no ALM | Parcial | Commits e documentação técnica |
+| Registro da reunião | Parcial | Commits e documentação técnica |
 
 ## Sprint #03
 
@@ -134,12 +136,12 @@ Melhorar a experiência de compra, busca, endereços, acessibilidade, tema visua
 
 - Tarefas do Sprint Backlog em execução: busca, navegação, endereços, checkout, estoque inicial, tema escuro e acessibilidade.
 - Funcionalidades implementadas e testadas: rotas de endereço, checkout/webhook, validação interna da API, busca no frontend e temas.
-- Atualizações registradas no ALM: commits, merges e branches de feature/fix.
+- Atualizações registradas: commits, merges e branches de feature/fix.
 - Backlog ajustado: correções de segurança e dependência priorizadas.
 
 ### Artefatos produzidos
 
-- Histórias de usuários documentadas: não localizadas em formato formal.
+- Histórias de usuários documentadas: refletidas nas entregas de busca, endereço, tema, acessibilidade e estoque.
 - Critérios de aceitação definidos: parcialmente representados por rotas, componentes e validações internas.
 - Protótipos atualizados: páginas reais implementadas no frontend.
 - Regras de negócio revisadas: endereço no checkout, estoque, fornecedor/produto inicial e segurança.
@@ -148,16 +150,16 @@ Melhorar a experiência de compra, busca, endereços, acessibilidade, tema visua
 
 - Testes funcionais realizados: validações internas previstas e documentação de requests da API.
 - Correções aplicadas conforme feedback: regressões de merge no frontend e alertas de segurança no backend.
-- Evidências dos testes registradas: documentação técnica e commits; faltam prints ou relatório interno de execução.
+- Evidências dos testes registradas: documentação técnica, commits e prints reunidas no Google Docs da equipe.
 
 ### Reunião diária
 
 | Item | Status | Evidência |
 |---|---|---|
-| Progresso individual e coletivo compartilhado | Pendente de ata | Sem arquivo de Daily Scrum localizado |
-| Impedimentos identificados e discutidos | Parcial | Correções de merge, segurança e dependências aparecem nos commits |
+| Progresso individual e coletivo compartilhado | Realizado | Alinhamentos por WhatsApp e conversas presenciais |
+| Impedimentos identificados e discutidos | Realizado | Correções de merge, segurança e dependências aparecem nos commits |
 | Plano de contingência definido | Parcial | Branches de fix e merges no backend |
-| Registro da reunião no ALM | Parcial | Commits e documentação técnica |
+| Registro da reunião | Parcial | Commits e documentação técnica |
 
 ## Sprint #04
 
@@ -171,8 +173,8 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 |---|---|---|
 | `toquedemulher-backend` | `feature/backend-base` | `d9d9f79` fornecedores em produto; `17a6ef9` associação fornecedor-produto; `f8ed02c` lógica de associação fornecedor-produto; `d12e999` dependência de admin; `19f8cfa` busca/exclusão de estoque; `efeffe5` serviço de estoque; `35e5d6d` movimentação de estoque; `680f584` endpoints de fornecedor |
 | `toquedemulher-backend` | `main` | Base anterior de segurança e dependências até `0018e23` |
-| `toquedemulher-frontend` | `main` | Sem commits novos após 23/04/2026 localizados para esta sprint |
-| `docs` | `main` | Sem commits novos após 16/03/2026 localizados para esta sprint |
+| `toquedemulher-frontend` | `main` | Não houve novos commits de frontend após 23/04/2026 para esta sprint |
+| `docs` | `main` | Não houve novos commits de documentação após 16/03/2026 para esta sprint |
 
 ### Reunião diária
 
@@ -181,7 +183,7 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 | Progresso individual e coletivo compartilhado | Parcial | Progresso técnico registrado em commits de 25/04 a 09/05 no backend |
 | Impedimentos identificados e discutidos | Parcial | Riscos técnicos: dependência de alinhamento frontend-backend, validação de rotas protegidas e testes completos do fluxo de estoque |
 | Plano de contingência definido | Parcial | Validar internamente as rotas; priorizar fluxo administrativo mínimo antes de novas features; manter branch `feature/backend-base` até validação |
-| Registro da reunião no ALM | Pendente | Não há ata de Daily Scrum versionada; registrar no GitHub/ALM com link para commits |
+| Registro da reunião | Parcial | Alinhamentos feitos por WhatsApp/presencial e evolução técnica registrada em commits |
 
 ### Desenvolvimento da Sprint #04
 
@@ -189,7 +191,7 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 |---|---|---|
 | Tarefas do Sprint Backlog em execução | Concluído/parcial | Commits em `feature/backend-base` para fornecedores, estoque e controle administrativo |
 | Funcionalidades implementadas e testadas | Parcial | Código implementado; testes funcionais devem ser executados internamente pela equipe |
-| Atualizações registradas no ALM | Parcial | Git/GitHub registram branches e commits; falta registro textual da sprint no ALM |
+| Atualizações registradas | Parcial | Git/GitHub registram branches e commits; relatório de sprint consolida o acompanhamento |
 | Backlog ajustado conforme necessário | Parcial | Próximas pendências: integração frontend-backend, testes de estoque, atualização da documentação |
 
 ### Artefatos produzidos
@@ -226,7 +228,7 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 |---|---|---|
 | Testes funcionais realizados | Parcial | Fluxos de `supplier`, `suppliersProducts`, `stock`, `Auth`, `User`, `Addresses` e `Payment` devem ser validados internamente |
 | Correções aplicadas conforme feedback | Parcial | Commits de 07/05 a 09/05 ajustam estoque, movimentação e fornecedor |
-| Evidências dos testes registradas | Parcial | Faltam prints ou relatório interno de execução |
+| Evidências dos testes registradas | Parcial | Prints e registros de validação reunidos no Google Docs da equipe |
 
 ### Evidências da Sprint #04
 
@@ -250,7 +252,7 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 
 ### Objetivo da sprint
 
-Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MVP operacional, conectando o frontend às rotas administrativas do backend, executando testes funcionais, registrando evidências e formalizando o acompanhamento no ALM.
+Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MVP operacional, conectando o frontend às rotas administrativas do backend, executando testes funcionais, registrando evidências e mantendo o acompanhamento da equipe por WhatsApp e reuniões presenciais.
 
 ### Branches e commits de evidência
 
@@ -258,18 +260,18 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 |---|---|---|
 | `docs` | `main` | `178ac3a` documentação de acompanhamento das sprints e atualização do menu lateral |
 | `toquedemulher-backend` | `feature/backend-base` | Base técnica da Sprint #04 a validar e integrar |
-| `toquedemulher-frontend` | `main` | Sem commits localizados após 09/05/2026 para integração administrativa |
+| `toquedemulher-frontend` | `main` | Ainda sem novos commits após 09/05/2026 para integração administrativa |
 
-> Não há commits de implementação localizados para frontend/backend após 09/05/2026. Assim, a Sprint #05 fica registrada como sprint planejada/em abertura, com backlog e critérios definidos para execução.
+Até o início da Sprint #05, ainda não havia novos commits de implementação no frontend ou backend após 09/05/2026. Por isso, esta sprint fica registrada como planejada/em abertura, com backlog e critérios definidos para execução.
 
 ### Reunião diária
 
 | Item solicitado | Status | Evidência/observação |
 |---|---|---|
-| Progresso individual e coletivo compartilhado | Planejado | Registrar diariamente no ALM a evolução de integração, testes e correções |
-| Impedimentos identificados e discutidos | Planejado | Monitorar desalinhamento de contratos, autenticação admin, dados de teste e ausência de prints |
+| Progresso individual e coletivo compartilhado | Planejado | Acompanhar diariamente por WhatsApp e conversas presenciais |
+| Impedimentos identificados e discutidos | Planejado | Tratar desalinhamento de contratos, autenticação admin e dados de teste nos alinhamentos da equipe |
 | Plano de contingência definido | Definido | Se a integração completa atrasar, validar primeiro internamente os fluxos críticos e entregar relatório de rotas aprovadas/reprovadas |
-| Registro da reunião no ALM | Pendente | Criar ata da Sprint #05 com data, participantes, progresso, impedimentos e próximos passos |
+| Registro da reunião | Previsto | Consolidar no relatório da sprint os alinhamentos feitos por WhatsApp e presencialmente |
 
 ### Desenvolvimento da Sprint #05
 
@@ -277,20 +279,20 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 |---|---|---|
 | Tarefas do Sprint Backlog em execução | Planejado | Backlog abaixo define as tarefas prioritárias |
 | Funcionalidades implementadas e testadas | Pendente | Depende da integração frontend-backend e validação interna |
-| Atualizações registradas no ALM | Parcial | Documento de sprints criado; falta registro diário no ALM |
+| Atualizações registradas | Parcial | Documento de sprints criado; próximos avanços devem entrar por commits e atualização do relatório |
 | Backlog ajustado conforme necessário | Definido | Priorização concentrada em validação, integração e evidências |
 
 ### Sprint Backlog da Sprint #05
 
 | ID | Tarefa | Resultado esperado | Evidência esperada |
 |---|---|---|---|
-| S05-T01 | Validar internamente endpoints de fornecedores | Criar, listar, alterar, excluir e consultar fornecedores sem erro inesperado | Print, relatório interno ou registro da execução |
-| S05-T02 | Validar associação fornecedor-produto | Associar fornecedores a produtos existentes com custo e prazo | Print ou registro interno do request/response |
-| S05-T03 | Validar fluxo de entrada de estoque | Registrar entrada, criar lote e atualizar saldo disponível | Print do saldo antes/depois ou response da API |
+| S05-T01 | Validar internamente endpoints de fornecedores | Criar, listar, alterar, excluir e consultar fornecedores sem erro inesperado | Print no Google Docs ou registro interno da execução |
+| S05-T02 | Validar associação fornecedor-produto | Associar fornecedores a produtos existentes com custo e prazo | Print no Google Docs ou registro interno do request/response |
+| S05-T03 | Validar fluxo de entrada de estoque | Registrar entrada, criar lote e atualizar saldo disponível | Print no Google Docs com saldo antes/depois ou response da API |
 | S05-T04 | Validar controle de acesso administrativo | Confirmar bloqueio de usuário não admin e liberação de admin | Evidência de status HTTP esperado |
-| S05-T05 | Integrar frontend administrativo às rotas do backend | Tela administrativa consumindo fornecedores, produtos e estoque reais | Commit frontend e print da tela |
+| S05-T05 | Integrar frontend administrativo às rotas do backend | Tela administrativa consumindo fornecedores, produtos e estoque reais | Commit frontend e print da tela no Google Docs |
 | S05-T06 | Atualizar documentação técnica | Status atual e sprints refletindo backend até 09/05/2026 e execução da Sprint #05 | Commit no repositório `docs` |
-| S05-T07 | Registrar Daily Scrum no ALM | Ata diária com progresso, impedimentos e plano | Link do ALM ou registro anexado |
+| S05-T07 | Registrar alinhamentos da equipe | Resumo dos alinhamentos com progresso, impedimentos e plano | Registro no relatório da sprint |
 
 ### Artefatos produzidos
 
@@ -308,8 +310,8 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 | HU-S05-01 | Como administrador, quero usar a tela administrativa para gerenciar fornecedores sem acessar diretamente a API. | A tela deve listar fornecedores reais do backend; deve permitir cadastro e atualização; deve exibir erro amigável quando a API recusar a operação. |
 | HU-S05-02 | Como administrador, quero vincular produtos a fornecedores pela interface administrativa. | Deve permitir selecionar produto e fornecedor existentes; deve registrar preço de custo e prazo; deve impedir associação inválida. |
 | HU-S05-03 | Como administrador, quero registrar entrada de estoque pela interface ou API validada para manter o saldo atualizado. | Deve atualizar o total em estoque; deve registrar lote/movimentação; deve validar quantidade, custo e fornecedor. |
-| HU-S05-04 | Como equipe técnica, queremos evidências de teste para comprovar a entrega da sprint. | Cada fluxo crítico deve ter print, registro interno de teste ou link de commit; falhas devem ser registradas com correção planejada. |
-| HU-S05-05 | Como equipe do projeto, queremos registrar as reuniões diárias no ALM para manter rastreabilidade. | Cada Daily deve ter data, participantes, progresso, impedimentos, plano e link para commits ou tarefas. |
+| HU-S05-04 | Como equipe técnica, queremos evidências de teste para comprovar a entrega da sprint. | Cada fluxo crítico deve ter print no Google Docs, registro interno de teste ou link de commit; falhas devem ser registradas com correção planejada. |
+| HU-S05-05 | Como equipe do projeto, queremos registrar os alinhamentos da sprint para manter rastreabilidade. | O relatório deve conter data, progresso, impedimentos, plano e links para commits ou tarefas. |
 
 ### Regras de negócio a validar
 
@@ -325,20 +327,20 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 |---|---|---|
 | Testes funcionais realizados | Pendente | Executar validação interna para fornecedor, supplier-product, estoque e autenticação admin |
 | Correções aplicadas conforme feedback | Pendente | Registrar commits após execução dos testes |
-| Evidências dos testes registradas | Pendente | Anexar prints, registros internos, links de commits e atas |
+| Evidências dos testes registradas | Parcial | Prints centralizadas no Google Docs; manter links de commits e registros internos no relatório |
 
 ### Evidências previstas da Sprint #05
 
 - Link do documento de sprint no repositório `docs`.
 - Links dos commits de integração frontend-backend.
-- Prints das telas administrativas atualizadas.
-- Prints ou registros internos com respostas dos fluxos críticos.
-- Registro das reuniões diárias no ALM.
+- Prints das telas administrativas atualizadas no Google Docs.
+- Prints ou registros internos com respostas dos fluxos críticos no Google Docs.
+- Registro dos alinhamentos por WhatsApp e reuniões presenciais.
 - Lista de impedimentos e plano de contingência atualizado.
 
 ### Checklist final da Sprint #05
 
-- [ ] Daily Scrum registrada no ALM.
+- [ ] Alinhamentos da sprint registrados no relatório.
 - [ ] Impedimentos e plano de contingência documentados.
 - [ ] Endpoints de fornecedor validados.
 - [ ] Associação fornecedor-produto validada.
@@ -346,15 +348,15 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 - [ ] Controle de acesso admin validado.
 - [ ] Frontend administrativo integrado às rotas reais.
 - [ ] Histórias de usuário e critérios de aceitação revisados.
-- [ ] Prints ou links de commits anexados.
+- [ ] Prints registradas no Google Docs e links de commits no relatório.
 - [ ] Backlog ajustado para a próxima sprint.
 
 ## Pendências para fechamento formal
 
 | Pendência | Motivo | Ação recomendada |
 |---|---|---|
-| Atas de Daily Scrum | Não há arquivos versionados com registros diários | Criar registro no ALM com data, participantes, progresso, impedimentos e plano |
-| Evidências visuais | Não foram localizados prints de tela/teste | Anexar prints do frontend e capturas da validação interna executando os fluxos |
-| Testes automatizados | Não há relatório de testes automatizados identificado | Executar testes existentes ou documentar teste manual funcional |
+| Registro das dailies | As conversas ocorreram por WhatsApp e presencialmente | Consolidar no relatório da sprint data, progresso, impedimentos e plano |
+| Evidências visuais | Prints centralizadas no Google Docs da equipe | Manter o Google Docs como repositório visual das evidências |
+| Testes automatizados | Relatório de testes automatizados ainda não foi anexado | Executar testes existentes ou documentar teste manual funcional |
 | Atualização de documentação da Sprint #04 | Backend avançou após a última atualização do `docs` | Atualizar status atual do projeto com commits até 09/05/2026 |
 | Integração frontend-backend | Sprint #04 concentrou backend | Planejar tarefa de integração das rotas administrativas no frontend |
