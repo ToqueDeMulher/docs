@@ -12,12 +12,6 @@ O vídeo não listado com as imagens do site está disponível em:
 
 - [Demonstração do site no YouTube](https://youtu.be/bMFOPJKa_tY)
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=bMFOPJKa_tY">
-    <img src="https://img.youtube.com/vi/bMFOPJKa_tY/maxresdefault.jpg" alt="Demonstração do site Toque de Mulher" width="800">
-  </a>
-</p>
-
 Esse link deve ser usado como evidência visual da navegação e do estado atual da interface.
 
 ## Prints anexados
