@@ -3,6 +3,7 @@
   - [Objetivos e KPIs](/introducao/objetivos.md)
   - [Escopo do MVP](/introducao/escopo.md)
   - [Status Atual](/introducao/status_atual.md)
+  - [Protótipo e Evidências Visuais](/introducao/prototipo.md)
 - [Roadmap Estratégico](/roadmap.md)
 - [Acompanhamento das Sprints](/sprints.md)
 - [Equipe](/equipe/stakeholders.md)

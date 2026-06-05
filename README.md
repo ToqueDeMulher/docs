@@ -1,13 +1,15 @@
 # Documentação do Projeto Toque de Mulher
 
-Este repositório concentra a documentação executiva e funcional do projeto Toque de Mulher. O conteúdo foi consolidado a partir dos arquivos `Plano de Projeto - 2025`, `Plano de Projeto Cliente` e `Plano de Futuro e Otimização - 2026`, com complemento do estado real do código versionado em **16 de março de 2026**.
+Este repositório concentra a documentação executiva e funcional do projeto Toque de Mulher. O conteúdo foi consolidado a partir dos arquivos `Plano de Projeto - 2025`, `Plano de Projeto Cliente` e `Plano de Futuro e Otimização - 2026`, com complemento do estado real do código versionado até **24 de maio de 2026**.
 
 ## Visão Geral
 
 A documentação principal fica em `docs/` e está organizada por tema:
 
 - `introducao/`: contexto de negócio, objetivos, escopo do MVP e status técnico atual.
+- `introducao/prototipo.md`: registro do mockup de alta fidelidade, prints de evidência e vídeo não listado do site.
 - `roadmap.md`: evolução planejada do MVP até as otimizações futuras.
+- `sprints.md`: acompanhamento consolidado das sprints, commits, entregas, pendências e evidências.
 - `equipe/`: stakeholders, papéis e responsabilidades.
 - `financeiro/`: visão de orçamento do MVP e custos operacionais esperados.
 - `riscos_e_dependencias/`: restrições, premissas, riscos e dependências críticas.
@@ -23,7 +25,9 @@ Os documentos principais podem ser acessados pelos links abaixo:
 - [Objetivos Estratégicos e KPIs](docs/introducao/objetivos.md)
 - [Escopo do MVP](docs/introducao/escopo.md)
 - [Status Atual da Implementação](docs/introducao/status_atual.md)
+- [Protótipo e Evidências Visuais](docs/introducao/prototipo.md)
 - [Roadmap Estratégico](docs/roadmap.md)
+- [Acompanhamento das Sprints](docs/sprints.md)
 - [Stakeholders](docs/equipe/stakeholders.md)
 - [Funções da Equipe](docs/equipe/funcao_equipe.md)
 - [Orçamento do Projeto](docs/financeiro/orcamento.md)
@@ -41,6 +45,7 @@ Os documentos principais podem ser acessados pelos links abaixo:
 |-- README.md
 `-- docs
     |-- _sidebar.md
+    |-- assets
     |-- aprovacao
     |-- contributing.md
     |-- equipe
@@ -48,7 +53,8 @@ Os documentos principais podem ser acessados pelos links abaixo:
     |-- glossario.md
     |-- introducao
     |-- riscos_e_dependencias
-    `-- roadmap.md
+    |-- roadmap.md
+    `-- sprints.md
 ```
 
 ## Nota de Consolidação
@@ -61,4 +67,4 @@ As diretrizes de contribuição estão em [Guia de Contribuição](docs/contribu
 
 ---
 
-*Última atualização: 16 de março de 2026*
+*Última atualização: 5 de junho de 2026*

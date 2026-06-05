@@ -13,7 +13,9 @@ Este repositório deve funcionar como a fonte principal de documentação do pro
 
 - atualize `introducao/contexto.md`, `objetivos.md` e `escopo.md` quando houver mudança de direção de negócio;
 - atualize `introducao/status_atual.md` quando frontend ou backend mudarem de forma relevante;
+- atualize `introducao/prototipo.md` quando houver novo mockup, print oficial ou mudança de referência visual;
 - atualize `roadmap.md` quando a ordem de prioridade ou as fases futuras forem revistas;
+- atualize `sprints.md` quando houver novos commits relevantes, validação de sprint, evidência visual ou mudança no backlog;
 - atualize `financeiro/` e `riscos_e_dependencias/` quando houver mudança de custo, restrição ou dependência externa.
 
 ## Boas práticas para contribuições
@@ -21,6 +23,7 @@ Este repositório deve funcionar como a fonte principal de documentação do pro
 - cite a origem da mudança: plano estratégico, decisão da equipe ou implementação já presente no código;
 - se houver divergência entre documentação e repositório, registre a divergência com clareza;
 - mantenha links internos e `_sidebar.md` atualizados;
+- mantenha assets de documentação com nomes rastreáveis e evite substituir prints sem registrar a mudança;
 - revise nomes de rotas, módulos e responsabilidades antes de documentar.
 
 ## Pull requests e revisão

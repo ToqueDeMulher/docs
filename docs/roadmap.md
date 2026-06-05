@@ -13,17 +13,20 @@ Este roadmap consolida o plano-base do projeto com o documento de futuro de 2026
 
 ## Fase 0: Situação atual do código
 
-O snapshot atual já mostra base para o MVP, mas ainda incompleta:
+O snapshot revisado em **5 de junho de 2026** mostra base avançada para o MVP, mas ainda incompleta:
 
-- frontend com catálogo, carrinho, checkout, páginas institucionais, área administrativa e gamificação;
-- backend com produtos, criação de usuário e preferência de pagamento;
-- desalinhamentos entre contratos de API, autenticação e fluxo de pedido.
+- frontend com catálogo, busca, carrinho, checkout, páginas institucionais, área administrativa, cadastro de endereço, gamificação e refinamentos visuais;
+- backend com produtos, usuários, login, endereços, pagamento, fornecedores, associação fornecedor-produto, estoque e movimentação de estoque;
+- mockup de alta fidelidade registrado em `docs/assets/figma_altafidelidade.png`;
+- desalinhamentos entre estruturas de rota do backend e contratos consumidos pelo frontend;
+- fluxo completo de pedido, pagamento e baixa de estoque ainda pendente de validação documentada.
 
 ## Fase 1: Consolidação do MVP
 
 Prioridade máxima antes de qualquer expansão funcional.
 
 - alinhar contratos entre frontend e backend;
+- consolidar uma única árvore de rotas backend e registrar os endpoints oficiais;
 - conectar catálogo público à API real;
 - finalizar cadastro, login, perfil e sessão autenticada;
 - registrar pedidos, integrar checkout e baixa automática de estoque;
@@ -38,6 +41,7 @@ Evolução direta do MVP para melhorar usabilidade e taxa de compra.
 - microinterações com feedback de ação;
 - skeleton screens e melhoria da percepção de performance;
 - galeria de produtos com mídia rica, zoom e melhor apresentação visual;
+- comparar telas implementadas com o mockup de alta fidelidade registrado na documentação;
 - SEO técnico e refinamento responsivo.
 
 ## Fase 3: Diferenciação em Beauty Tech

@@ -1,66 +1,80 @@
 # Status Atual da Implementação
 
-Este documento registra o estado do código versionado em **16 de março de 2026** e cruza o planejamento do projeto com o que realmente existe no repositório hoje.
+Este documento registra o estado do código versionado até **24 de maio de 2026**, com revisão documental em **5 de junho de 2026**. A atualização foi feita a partir dos logs Git dos repositórios `toquedemulher-frontend`, `toquedemulher-backend` e `docs`, além da leitura dos arquivos principais de rotas e serviços.
 
 ## Resumo executivo
 
-O projeto já possui frontend navegável e backend funcional para partes do fluxo comercial, mas o MVP ainda está **parcial**. Há recursos importantes implementados visualmente no frontend e serviços relevantes no backend, porém ainda existem desalinhamentos entre contratos, rotas e responsabilidades dos dois lados.
+O projeto evoluiu para um MVP navegável no frontend e uma base backend mais ampla, com autenticação, produtos, usuários, endereços, pagamentos, fornecedores, estoque e associação fornecedor-produto. O estado atual ainda é **parcial/em validação**, porque há duas estruturas de rota no backend e a integração frontend-backend precisa ser testada de ponta a ponta.
 
 ## Arquitetura efetiva do snapshot
 
-- **Frontend:** `React 18`, `TypeScript`, `Vite`, `React Router` e componentes próprios.
-- **Backend:** `FastAPI` com `SQLModel`, CORS configurado, upload de imagens e integração com Mercado Pago.
-- **Persistência:** criação de tabelas no startup da aplicação; imagens enviadas para Supabase.
+- **Frontend:** `React 18`, `TypeScript`, `Vite`, `React Router`, Radix UI, serviços HTTP centralizados e `axios` adicionado em maio.
+- **Backend:** `FastAPI`, modelos SQLAlchemy/SQLModel, CORS, arquivos estáticos, autenticação JWT, pagamento, fornecedores e estoque.
+- **Documentação:** docs atualizados com acompanhamento de sprints, mockup de alta fidelidade, prints de evidência em `docs/assets` e vídeo não listado de demonstração do site.
 
-> Observação importante: os documentos de planejamento citam `React + Node.js` como direção tecnológica, mas o código versionado hoje usa `React + FastAPI/Python`.
+> Observação importante: os documentos de planejamento citam `React + Node.js` como direção tecnológica, mas o código versionado usa `React + FastAPI/Python`.
 
 ## O que já está implementado
 
 ### Frontend
 
-- home, catálogo por categoria e página de produto;
-- carrinho e checkout em etapas (`endereço`, `pagamento`, `confirmação`);
-- login, perfil e páginas institucionais;
-- dashboard administrativo e tela de cadastro de produto;
+- home, catálogo por categoria, busca e página de produto;
+- carrinho e checkout em etapas;
+- login, cadastro, perfil e tela de cadastro de endereço com autocompletar por CEP;
+- páginas institucionais, ajuda, sobre e página de erro;
+- área administrativa protegida por `RequireAdmin`;
+- dashboard administrativo e cadastro de produto com upload de imagem;
 - páginas de gamificação (`missões` e `ranking`);
-- persistência local de carrinho com `localStorage`.
+- tema claro/escuro, refinamentos de estilo e melhorias de UI/UX registradas até 24/05/2026;
+- centralização de serviços em `apiClient`, `authService`, `productService` e `addressService`.
 
 ### Backend
 
-- inicialização da API com CORS e arquivos estáticos;
-- criação de produto com supplier, brand, description, categories, stock e imagens;
-- upload de imagem de produto com validação de tipo;
-- geração de preferência de pagamento com Mercado Pago;
-- criação de usuário;
-- webhook de pagamento presente em arquivo, mas ainda não acoplado ao `app.main`.
+- inicialização da API com CORS, arquivos estáticos e criação de tabelas no startup;
+- rotas montadas no `app/main.py` para produto, pagamento, usuário, login, endereço, fornecedor, estoque e associação fornecedor-produto;
+- criação de produto, upload de imagem e lógica relacionada a fornecedor/produto;
+- registro, login, consulta e alteração de usuário na estrutura legada `/api/v1/user`;
+- checkout/pagamento e webhooks de pagamento presentes;
+- CRUD de endereço;
+- gestão de fornecedores;
+- associação fornecedor-produto;
+- criação, consulta, alteração, exclusão e movimentação de estoque;
+- estrutura adicional em `app/api/v1/router.py` com routers para `/auth`, `/users`, `/products`, `/cart`, `/orders`, `/payments` e `/reviews`, ainda não montada no `main.py` atual.
+
+## Evidência visual
+
+O mockup de alta fidelidade, os prints de organização/integração e o vídeo não listado do site foram registrados em [Protótipo e Evidências Visuais](prototipo.md). Eles servem como referência para comparar a direção visual planejada com as telas implementadas e para comprovar avanços técnicos do frontend/backend.
 
 ## O que está parcial ou desalinhado
 
-- o frontend de autenticação consome rotas como `/auth/login`, `/auth/register` e `/users/me`, mas o backend montado hoje expõe apenas `/user/createUser`;
-- existe um arquivo de login no backend, porém ele não está registrado em `app/main.py`;
-- o frontend envia upload para `/products/{id}/images`, enquanto o backend publica `/products/{product_id}/images/upload`;
-- o payload de criação de produto no frontend não segue o schema de `CreateProductRequest` do backend;
-- o catálogo público do frontend ainda usa dados locais em `src/shared/data/catalog-products.ts`, e não leitura dinâmica da API;
-- checkout, pedido e baixa automática de estoque ainda não aparecem como fluxo persistido de ponta a ponta;
-- relatórios, gestão de pedidos e painel administrativo completo continuam pendentes no backend.
+- o backend possui uma estrutura versionada em `app/api/v1/router.py`, mas o `app/main.py` monta routers legados/importados individualmente;
+- o frontend consome autenticação em `/user/login`, `/user/register` e `/user/me`, enquanto parte do backend novo também define `/auth/*` e `/users/*`;
+- o serviço de endereço do frontend envia para `/addresses`, enquanto o backend legado monta `/addresses/`;
+- o catálogo público ainda depende de dados locais em `src/shared/data/catalog-products.ts`;
+- pedidos, baixa automática de estoque e conciliação de pagamento ainda precisam ser validados como fluxo completo;
+- a proteção administrativa existe no frontend e há dependência admin no backend, mas o bloqueio por perfil precisa de evidência funcional;
+- não há relatório de teste automatizado anexado na documentação atual.
 
 ## Recursos previstos mas ainda não implementados
 
 Os itens abaixo aparecem nos planos de projeto e permanecem como backlog:
 
-- busca avançada e fuzzy search;
+- busca avançada com tolerância a erro e autocomplete completo integrado à API;
 - rotina personalizada de produtos (`routine builder`);
 - comparador inteligente de produtos;
 - wishlist social e notificações de interesse;
 - programa de fidelidade por níveis;
-- avaliações com foto e vídeo;
+- avaliações com foto e vídeo em produção;
 - PWA, modo offline e notificações push;
-- painel de privacidade e consentimento LGPD granular.
+- painel de privacidade e consentimento LGPD granular;
+- relatórios administrativos completos.
 
 ## Próximos passos recomendados
 
-- alinhar contratos entre frontend e backend antes de ampliar o escopo;
-- conectar catálogo, autenticação e checkout à API real;
-- registrar e finalizar o fluxo de pedidos, webhook e baixa de estoque;
-- substituir `create_all` por migrações formais de banco;
-- usar o roadmap para priorizar primeiro a consolidação do MVP e só depois os diferenciais de experiência.
+- escolher uma única estrutura de roteamento no backend e montar a API principal de forma consistente;
+- alinhar contratos entre frontend e backend para autenticação, endereço, produto, imagem, pedido e estoque;
+- conectar catálogo público à API real;
+- validar checkout, pedido, pagamento e baixa de estoque de ponta a ponta;
+- registrar evidências de teste funcional nas sprints;
+- substituir criação automática de tabelas por migrações Alembic quando o modelo estabilizar;
+- priorizar consolidação do MVP antes de ampliar diferenciais de experiência.
