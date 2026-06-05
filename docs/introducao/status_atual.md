@@ -4,7 +4,7 @@ Este documento registra o estado do código versionado até **24 de maio de 2026
 
 ## Resumo executivo
 
-O projeto evoluiu para um MVP navegável no frontend e uma base backend mais ampla, com autenticação, produtos, usuários, endereços, pagamentos, fornecedores, estoque e associação fornecedor-produto. O estado atual ainda é **parcial/em validação**, porque há duas estruturas de rota no backend e a integração frontend-backend precisa ser testada de ponta a ponta.
+O projeto evoluiu para um MVP navegável no frontend e uma base backend mais ampla, com autenticação, produtos, usuários, endereços, pagamentos, fornecedores, estoque e associação fornecedor-produto. A integração de **registro, login e consulta de usuário autenticado** já está funcionando entre frontend e backend. O estado geral do MVP ainda é **parcial/em validação**, porque os demais fluxos de catálogo, endereço, produto, estoque, pedido e pagamento ainda precisam de validação de ponta a ponta documentada.
 
 ## Arquitetura efetiva do snapshot
 
@@ -45,13 +45,21 @@ O projeto evoluiu para um MVP navegável no frontend e uma base backend mais amp
 
 O mockup de alta fidelidade, os prints de organização/integração e o vídeo não listado do site foram registrados em [Protótipo e Evidências Visuais](prototipo.md). Eles servem como referência para comparar a direção visual planejada com as telas implementadas e para comprovar avanços técnicos do frontend/backend.
 
+## Integração validada
+
+| Fluxo | Status | Observação |
+|---|---|---|
+| Registro de usuário | Integrado e funcionando | Frontend envia os dados de cadastro para o backend e recebe resposta esperada |
+| Login | Integrado e funcionando | Frontend autentica no backend e mantém a sessão com token |
+| Consulta de usuário autenticado (`get user`/`me`) | Integrado e funcionando | Frontend consegue recuperar os dados do usuário logado a partir do backend |
+
 ## O que está parcial ou desalinhado
 
 - o backend possui uma estrutura versionada em `app/api/v1/router.py`, mas o `app/main.py` monta routers legados/importados individualmente;
-- o frontend consome autenticação em `/user/login`, `/user/register` e `/user/me`, enquanto parte do backend novo também define `/auth/*` e `/users/*`;
+- o frontend consome autenticação em `/user/login`, `/user/register` e `/user/me`, e essa integração está funcionando; ainda existe, porém, uma estrutura alternativa no backend novo com `/auth/*` e `/users/*`;
 - o serviço de endereço do frontend envia para `/addresses`, enquanto o backend legado monta `/addresses/`;
 - o catálogo público ainda depende de dados locais em `src/shared/data/catalog-products.ts`;
-- pedidos, baixa automática de estoque e conciliação de pagamento ainda precisam ser validados como fluxo completo;
+- catálogo, endereço, produto, pedidos, baixa automática de estoque e conciliação de pagamento ainda precisam ser validados como fluxo completo;
 - a proteção administrativa existe no frontend e há dependência admin no backend, mas o bloqueio por perfil precisa de evidência funcional;
 - não há relatório de teste automatizado anexado na documentação atual.
 
@@ -72,7 +80,7 @@ Os itens abaixo aparecem nos planos de projeto e permanecem como backlog:
 ## Próximos passos recomendados
 
 - escolher uma única estrutura de roteamento no backend e montar a API principal de forma consistente;
-- alinhar contratos entre frontend e backend para autenticação, endereço, produto, imagem, pedido e estoque;
+- manter documentado o contrato funcional de autenticação e alinhar os contratos restantes de endereço, produto, imagem, pedido e estoque;
 - conectar catálogo público à API real;
 - validar checkout, pedido, pagamento e baixa de estoque de ponta a ponta;
 - registrar evidências de teste funcional nas sprints;

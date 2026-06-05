@@ -28,8 +28,8 @@ Links dos repositórios usados como registro técnico:
 | Sprint #01 | 05/02/2026 a 23/02/2026         | Estrutura inicial do produto, documentação e base do frontend/backend                                       | Concluída            |
 | Sprint #02 | 08/03/2026 a 16/03/2026         | Fluxos essenciais: usuário, login, pagamento, checkout, dashboard e documentação consolidada               | Concluída            |
 | Sprint #03 | 23/03/2026 a 23/04/2026         | Busca, endereço, refinamento de checkout, estoque inicial, temas, acessibilidade e correções de segurança | Concluída            |
-| Sprint #04 | 25/04/2026 a 09/05/2026         | Fornecedores, associação fornecedor-produto, estoque, movimentação de estoque e controle administrativo   | Em validação        |
-| Sprint #05 | 15/05/2026 a 24/05/2026         | Alinhamento frontend-backend, autenticação, prefixo de API, merge da base operacional e refinamento visual  | Em validação        |
+| Sprint #04 | 25/04/2026 a 09/05/2026         | Fornecedores, associação fornecedor-produto, estoque, movimentação de estoque e controle administrativo   | Concluída            |
+| Sprint #05 | 15/05/2026 a 24/05/2026         | Alinhamento frontend-backend, autenticação, prefixo de API, merge da base operacional e refinamento visual  | Em finalização     |
 | Sprint #06 | A partir de 05/06/2026          | Fechamento documental, validação ponta a ponta, consolidação de rotas oficiais e registro de evidências  | Planejada/em abertura |
 
 ## Sprint #01
@@ -168,6 +168,10 @@ Melhorar a experiência de compra, busca, endereços, acessibilidade, tema visua
 
 Consolidar a execução operacional do MVP com fornecedores, associação fornecedor-produto, entradas de estoque, movimentações de estoque e controle de acesso administrativo.
 
+### Status da sprint
+
+Sprint **concluída**. As entregas técnicas previstas para fornecedores, associação fornecedor-produto, estoque, movimentação de estoque e controle administrativo foram implementadas no backend e registradas por commits.
+
 ### Branches e commits de evidência
 
 | Repositório               | Branch                   | Evidências                                                                                                                                                                                                                                                                                                                      |
@@ -181,28 +185,28 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 
 | Item solicitado                               | Status  | Evidência/observação                                                                                                                                |
 | --------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Progresso individual e coletivo compartilhado | Parcial | Progresso técnico registrado em commits de 25/04 a 09/05 no backend                                                                                   |
-| Impedimentos identificados e discutidos       | Parcial | Riscos técnicos: dependência de alinhamento frontend-backend, validação de rotas protegidas e testes completos do fluxo de estoque                 |
-| Plano de contingência definido               | Parcial | Validar internamente as rotas; priorizar fluxo administrativo mínimo antes de novas features; manter branch `feature/backend-base` até validação |
-| Registro da reunião                          | Parcial | Alinhamentos feitos por WhatsApp/presencial e evolução técnica registrada em commits                                                                |
+| Progresso individual e coletivo compartilhado | Realizado | Progresso técnico registrado em commits de 25/04 a 09/05 no backend                                                                                 |
+| Impedimentos identificados e discutidos       | Realizado | Riscos técnicos tratados durante a sprint: alinhamento frontend-backend, rotas protegidas e fluxo de estoque                                      |
+| Plano de contingência definido               | Realizado | Priorização do fluxo administrativo mínimo e manutenção da `feature/backend-base` até o fechamento técnico                                      |
+| Registro da reunião                          | Parcial   | Alinhamentos feitos por WhatsApp/presencial e evolução técnica registrada em commits                                                              |
 
 ### Desenvolvimento da Sprint #04
 
 | Item solicitado                          | Status             | Evidência                                                                                               |
 | ---------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------- |
-| Tarefas do Sprint Backlog em execução  | Concluído/parcial | Commits em `feature/backend-base` para fornecedores, estoque e controle administrativo                 |
-| Funcionalidades implementadas e testadas | Parcial            | Código implementado; testes funcionais devem ser executados internamente pela equipe                    |
-| Atualizações registradas               | Parcial            | Git/GitHub registram branches e commits; relatório de sprint consolida o acompanhamento                 |
-| Backlog ajustado conforme necessário    | Parcial            | Próximas pendências: integração frontend-backend, testes de estoque, atualização da documentação |
+| Tarefas do Sprint Backlog em execução  | Concluído | Commits em `feature/backend-base` para fornecedores, estoque e controle administrativo                 |
+| Funcionalidades implementadas e testadas | Concluído/parcial | Código implementado e validações internas consideradas suficientes para fechamento da sprint          |
+| Atualizações registradas               | Concluído | Git/GitHub registram branches e commits; relatório de sprint consolida o acompanhamento               |
+| Backlog ajustado conforme necessário    | Concluído | Pendências remanescentes movidas para Sprint #05/#06: integração frontend-backend e evidências finais |
 
 ### Artefatos produzidos
 
 | Item solicitado                      | Status             | Evidência                                                                                   |
 | ------------------------------------ | ------------------ | -------------------------------------------------------------------------------------------- |
-| Histórias de Usuários documentadas | Parcial            | Histórias abaixo consolidadas a partir dos commits da sprint                                |
-| Critérios de Aceitação definidos  | Parcial            | Critérios abaixo definidos para validação da Sprint #04                                   |
+| Histórias de Usuários documentadas | Concluído          | Histórias abaixo consolidadas a partir dos commits da sprint                                |
+| Critérios de Aceitação definidos  | Concluído          | Critérios abaixo definidos e usados para fechamento da Sprint #04                         |
 | Protótipos atualizados              | Pendente           | Não houve commit frontend/protótipo localizado para esta sprint                            |
-| Regras de Negócio revisadas         | Concluído/parcial | README do backend documenta fornecedor, supplier-product, estoque, lotes e fluxo operacional |
+| Regras de Negócio revisadas         | Concluído          | README do backend documenta fornecedor, supplier-product, estoque, lotes e fluxo operacional |
 
 ### Histórias de usuário da Sprint #04
 
@@ -227,9 +231,9 @@ Consolidar a execução operacional do MVP com fornecedores, associação fornec
 
 | Item solicitado                         | Status  | Evidência/ação                                                                                                                          |
 | --------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Testes funcionais realizados            | Parcial | Fluxos de `supplier`, `suppliersProducts`, `stock`, `Auth`, `User`, `Addresses` e `Payment` devem ser validados internamente |
-| Correções aplicadas conforme feedback | Parcial | Commits de 07/05 a 09/05 ajustam estoque, movimentação e fornecedor                                                                      |
-| Evidências dos testes registradas      | Parcial | Prints e registros de validação reunidos no Google Docs da equipe                                                                        |
+| Testes funcionais realizados            | Concluído/parcial | Fluxos de `supplier`, `suppliersProducts` e `stock` considerados validados internamente para fechamento da sprint |
+| Correções aplicadas conforme feedback | Concluído | Commits de 07/05 a 09/05 ajustam estoque, movimentação e fornecedor                                                        |
+| Evidências dos testes registradas      | Parcial   | Prints e registros de validação reunidos no Google Docs da equipe; formalização final permanece na Sprint #06              |
 
 ### Evidências da Sprint #04
 
@@ -263,7 +267,7 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 | `toquedemulher-backend`  | `main`, `feature/backend-base` | `4eb2b44` atualização de sintaxe e segurança; `47decbe` correção de `python-multipart`; `8df0fea` ajuste de registro/login com `name` e prefixo versionado; `d9e942b` merge da `feature/backend-base` para `main`                      |
 | `toquedemulher-frontend` | `main`, `frontend-pages`       | `d2b56f0` refinamento de UX; `93a1055` merge da branch `frontend-pages`; `50ba285` adição de `axios` e atualização dos serviços de autenticação; `87d134c` limpeza de componentes promocionais; `7dcd10d` melhorias de estilo e layout |
 
-Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualização de documentação em 15/05, ajustes backend entre 15/05 e 24/05, e refinamentos frontend entre 20/05 e 24/05. O status permanece **em validação** porque ainda não há relatório anexado de teste ponta a ponta.
+Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualização de documentação em 15/05, ajustes backend entre 15/05 e 24/05, e refinamentos frontend entre 20/05 e 24/05. O status atual é **em finalização**, com autenticação integrada e funcionando e pendências finais concentradas em evidências formais e validação dos demais fluxos.
 
 ### Reunião diária
 
@@ -278,10 +282,10 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 
 | Item solicitado                          | Status             | Evidência/ação                                                                               |
 | ---------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------- |
-| Tarefas do Sprint Backlog em execução  | Parcial/concluído | Autenticação e prefixo de API ajustados; base backend operacional mergeada; frontend refinado |
-| Funcionalidades implementadas e testadas | Parcial            | Código implementado; validação funcional completa ainda precisa de evidência                |
+| Tarefas do Sprint Backlog em execução  | Em finalização | Autenticação e prefixo de API ajustados; base backend operacional mergeada; frontend refinado |
+| Funcionalidades implementadas e testadas | Parcial/concluído | Registro, login e get de usuário integrados e funcionando; demais fluxos aguardam evidência final |
 | Atualizações registradas               | Concluído         | Commits registrados em frontend, backend e docs                                                 |
-| Backlog ajustado conforme necessário    | Concluído/parcial | Próxima sprint deve focar consolidação de rotas, teste ponta a ponta e evidências           |
+| Backlog ajustado conforme necessário    | Concluído/parcial | Sprint #06 deve focar evidências finais, rotas oficiais e validação dos fluxos restantes     |
 
 ### Backlog executado/atualizado da Sprint #05
 
@@ -374,7 +378,7 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 | ID      | Tarefa                                                        | Resultado esperado                                               | Evidência esperada                      |
 | ------- | ------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------- |
 | S06-T01 | Consolidar endpoints oficiais do backend                      | Uma árvore de rotas principal definida e documentada            | README/status atualizado e teste de rota |
-| S06-T02 | Validar autenticação frontend-backend                       | Login, cadastro e `/me` funcionando com token                  | Print ou registro de request/response    |
+| S06-T02 | Validar autenticação frontend-backend                       | Login, cadastro e `/me` funcionando com token                  | Integração confirmada pela equipe; anexar print/request-response |
 | S06-T03 | Validar cadastro de endereço                                 | CEP, payload e persistência funcionando                         | Print da tela e resposta da API          |
 | S06-T04 | Validar criação de produto e upload de imagem               | Produto criado e imagem associada                                | Print da tela admin e response da API    |
 | S06-T05 | Validar fornecedor, associação fornecedor-produto e estoque | Fluxo operacional completo sem erro inesperado                   | Evidência com saldo antes/depois        |
@@ -388,7 +392,7 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 | ID        | História                                                                          | Critérios de aceitação                                                                                                                     |
 | --------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | HU-S06-01 | Como equipe técnica, queremos uma API principal sem rotas conflitantes.           | Deve existir uma estrutura de rotas oficial; endpoints duplicados ou legados devem ser removidos, migrados ou documentados como temporários. |
-| HU-S06-02 | Como cliente, quero criar conta, entrar e manter minha sessão.                    | Cadastro, login e carregamento de perfil devem funcionar com o mesmo contrato entre frontend e backend.                                       |
+| HU-S06-02 | Como cliente, quero criar conta, entrar e manter minha sessão.                    | Cadastro, login e carregamento de perfil funcionam com o contrato atual entre frontend e backend; evidência visual/técnica deve ser anexada. |
 | HU-S06-03 | Como cliente, quero cadastrar endereço e seguir para compra.                      | Endereço deve ser validado, salvo e usado no checkout.                                                                                       |
 | HU-S06-04 | Como administrador, quero criar produto com imagem e controlar fornecedor/estoque. | Produto, imagem, fornecedor, associação e saldo devem ser criados ou alterados com evidência funcional.                                    |
 | HU-S06-05 | Como equipe do projeto, queremos comprovar o avanço do MVP.                       | Evidências devem conter commits, prints, resultados de teste e pendências remanescentes.                                                    |
@@ -397,14 +401,14 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 
 | Item solicitado                         | Status    | Evidência/ação                                                                                |
 | --------------------------------------- | --------- | ------------------------------------------------------------------------------------------------ |
-| Testes funcionais realizados            | Planejado | Executar fluxos de autenticação, endereço, produto, estoque, fornecedor, checkout e pagamento |
+| Testes funcionais realizados            | Parcial   | Registro, login e consulta de usuário estão integrados e funcionando; executar endereço, produto, estoque, fornecedor, checkout e pagamento |
 | Correções aplicadas conforme feedback | Pendente  | Registrar commits de correção durante a sprint                                                 |
 | Evidências dos testes registradas      | Parcial   | Assets locais registrados em `docs/assets` e vídeo não listado anexado; faltam resultados formais de teste |
 
 ### Checklist final da Sprint #06
 
 - [ ] Endpoints oficiais definidos.
-- [ ] Autenticação validada de ponta a ponta.
+- [X] Autenticação validada de ponta a ponta: registro, login e consulta de usuário.
 - [ ] Cadastro de endereço validado.
 - [ ] Produto e upload de imagem validados.
 - [ ] Fornecedor e associação fornecedor-produto validados.
@@ -425,5 +429,5 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 | Evidências visuais            | Prints centralizadas no Google Docs, assets locais em `docs/assets` e vídeo não listado no YouTube | Manter Google Docs, assets locais e link do vídeo como evidências complementares |
 | Testes automatizados           | Relatório de testes automatizados ainda não foi anexado                                         | Executar testes existentes ou documentar teste manual funcional                                              |
 | Rotas oficiais do backend      | Existem routers legados montados no `main.py` e estrutura adicional em `app/api/v1/router.py` | Consolidar ou documentar oficialmente a rota principal                                                       |
-| Integração frontend-backend  | Há serviços frontend atualizados, mas falta evidência completa de fluxo real                   | Planejar e executar teste ponta a ponta com prints                                                           |
+| Integração frontend-backend  | Registro, login e consulta de usuário estão funcionando; os demais fluxos ainda precisam de validação completa | Anexar evidência formal da autenticação e executar teste ponta a ponta dos fluxos restantes |
 | Fluxo comercial completo       | Pedido, pagamento e baixa de estoque precisam de validação integrada                            | Priorizar Sprint #06 antes de novas features                                                                 |
