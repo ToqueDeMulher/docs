@@ -11,7 +11,7 @@ Relatório consolidado em **5 de junho de 2026**, elaborado a partir dos commits
 | `docs`                   | `main`, `backup/main-before-rewrite`, `backup/main-before-remove-0c7ceec`                                                    | Documentação executiva, escopo, roadmap, status técnico, sprints, riscos, glossário e mockup de alta fidelidade                               |
 | `.github`                | `main`                                                                                                                           | Perfil institucional, badges e apresentação pública da organização                                                                           |
 
-As reuniões diárias aconteceram por alinhamentos rápidos no **WhatsApp** e também de forma **presencial**, conforme a necessidade da equipe. O Git/GitHub foi usado como principal registro técnico das entregas.
+As dailies/alinhamentos da equipe acontecem **semanalmente**, normalmente das **21h às 22h30**, com possibilidade de extensão até aproximadamente **23h** quando há pendências técnicas ou fechamento de entrega. O progresso discutido nas reuniões é rastreado pelos logs, branches e commits do GitHub.
 
 As prints de evidência ficam reunidas no **Google Docs compartilhado da equipe**, usado como material de apoio do relatório da sprint. A documentação também possui assets locais em `docs/assets` e o vídeo não listado [Demonstração do site no YouTube](https://youtu.be/bMFOPJKa_tY).
 
@@ -265,7 +265,7 @@ Fechar as pendências da Sprint #04 e avançar para uma entrega validável do MV
 | -------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `docs`                   | `main`                           | `178ac3a`, `425a26d`, `fe6be31` documentação de acompanhamento das sprints, clareza estrutural e rastreabilidade de evidências                                                                                                                     |
 | `toquedemulher-backend`  | `main`, `feature/backend-base` | `4eb2b44` atualização de sintaxe e segurança; `47decbe` correção de `python-multipart`; `8df0fea` ajuste de registro/login com `name` e prefixo versionado; `d9e942b` merge da `feature/backend-base` para `main`                      |
-| `toquedemulher-frontend` | `main`, `frontend-pages`       | `d2b56f0` refinamento de UX; `93a1055` merge da branch `frontend-pages`; `50ba285` adição de `axios` e atualização dos serviços de autenticação; `87d134c` limpeza de componentes promocionais; `7dcd10d` melhorias de estilo e layout |
+| `toquedemulher-frontend` | `main`, `frontend-pages`       | `d2b56f0` refinamento de UX; `93a1055` merge da branch `frontend-pages`; `50ba285` adição de `axios` e atualização dos serviços de autenticação; `87d134c` limpeza de componentes promocionais; `7dcd10d` melhorias de estilo, layout, cores e tipografia |
 
 Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualização de documentação em 15/05, ajustes backend entre 15/05 e 24/05, e refinamentos frontend entre 20/05 e 24/05. O status atual é **em finalização**, com autenticação integrada e funcionando e pendências finais concentradas em evidências formais e validação dos demais fluxos.
 
@@ -273,10 +273,10 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 
 | Item solicitado                               | Status            | Evidência/observação                                                                            |
 | --------------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------- |
-| Progresso individual e coletivo compartilhado | Realizado/parcial | Alinhamentos por WhatsApp e conversas presenciais; progresso técnico registrado em commits        |
+| Progresso individual e coletivo compartilhado | Realizado/parcial | Dailies semanais das 21h às 22h30, eventualmente até 23h; progresso técnico registrado nos logs do GitHub |
 | Impedimentos identificados e discutidos       | Realizado/parcial | Desalinhamento de contratos e duplicidade de estruturas de rota permanecem como risco técnico     |
 | Plano de contingência definido               | Parcial           | Priorizar validação dos fluxos críticos e documentar endpoints oficiais antes de novas features |
-| Registro da reunião                          | Parcial           | Commits e documentação atualizada; ata detalhada ainda deve ser consolidada pela equipe          |
+| Registro da reunião                          | Parcial           | Commits/logs do GitHub e documentação atualizada; ata detalhada ainda deve ser consolidada pela equipe |
 
 ### Desenvolvimento da Sprint #05
 
@@ -296,7 +296,7 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 | S05-T03 | Atualizar sintaxe e segurança backend        | Ajustes de segurança e modernização aplicados              | `4eb2b44`                           |
 | S05-T04 | Alinhar autenticação com frontend           | Registro/login passam a incluir `name` e prefixo versionado | `8df0fea`                           |
 | S05-T05 | Integrar branch operacional backend           | `feature/backend-base` mergeada em `main`                 | `d9e942b`                           |
-| S05-T06 | Refinar UX e layout frontend                  | Páginas e componentes ajustados visualmente                  | `d2b56f0`, `87d134c`, `7dcd10d` |
+| S05-T06 | Refinar UX e layout frontend                  | Páginas e componentes ajustados visualmente; predominância visual mudou de rosa para preto a pedido da cliente; fontes passaram de `Inter` para `All Round Gothic` e `Noto Sans` | `d2b56f0`, `87d134c`, `7dcd10d` |
 | S05-T07 | Atualizar serviço de autenticação frontend | `axios` adicionado e fluxo de login/cadastro revisado       | `50ba285`                           |
 
 ### Artefatos produzidos
@@ -314,7 +314,7 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 | --------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | HU-S05-01 | Como cliente, quero cadastrar e acessar minha conta usando o frontend conectado ao backend.                      | Login e cadastro devem enviar `email`, `password` e `name` conforme contrato atual; sessão deve persistir token e usuário no navegador.        |
 | HU-S05-02 | Como administrador, quero que a base operacional de fornecedor e estoque esteja disponível na branch principal. | Commits da `feature/backend-base` devem estar mergeados na `main` e os endpoints devem permanecer acessíveis no app backend.                      |
-| HU-S05-03 | Como usuária da loja, quero navegar por páginas visualmente mais consistentes.                                 | Layout, cores e componentes devem refletir os refinamentos de UX feitos no frontend.                                                                   |
+| HU-S05-03 | Como usuária da loja, quero navegar por páginas visualmente mais consistentes.                                 | Layout, cores e componentes devem refletir os refinamentos de UX feitos no frontend, incluindo a predominância do preto, as fontes `All Round Gothic`/`Noto Sans` e a manutenção da estrutura geral do mockup. |
 | HU-S05-04 | Como equipe técnica, queremos evidências de teste para comprovar a entrega da sprint.                          | Cada fluxo crítico deve ter print no Google Docs, registro interno de teste ou link de commit; falhas devem ser registradas com correção planejada. |
 | HU-S05-05 | Como equipe do projeto, queremos registrar os alinhamentos da sprint para manter rastreabilidade.                | O relatório deve conter progresso, impedimentos, plano e links para commits ou tarefas.                                                               |
 
@@ -322,6 +322,9 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 
 - Registro de usuário deve incluir `name`, `email` e `password`.
 - Login deve retornar token para autenticação das rotas protegidas.
+- A identidade visual final deve usar preto como cor predominante, conforme solicitação da cliente.
+- A tipografia final deve usar `All Round Gothic` e `Noto Sans` no lugar de `Inter`.
+- A gamificação de produtos deve complementar a experiência de catálogo sem alterar a estrutura principal aprovada no mockup.
 - Produto só pode ser associado a fornecedor existente.
 - Entrada de estoque deve atualizar saldo disponível e manter rastreabilidade por lote/movimentação.
 - Apenas usuários administradores devem executar operações administrativas de fornecedor, estoque e associação fornecedor-produto.
@@ -350,6 +353,9 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 - [X] Impedimentos e plano de contingência documentados.
 - [X] Branch backend operacional mergeada na `main`.
 - [X] Serviço de autenticação frontend atualizado.
+- [X] Cores predominantes ajustadas de rosa para preto a pedido da cliente.
+- [X] Fontes ajustadas de `Inter` para `All Round Gothic` e `Noto Sans`.
+- [X] Gamificação de produtos adicionada.
 - [X] Histórias de usuário e critérios de aceitação revisados.
 - [X] Mockup de alta fidelidade registrado nos assets da documentação.
 - [ ] Endpoints de fornecedor validados com evidência anexada.
@@ -397,6 +403,16 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 | HU-S06-04 | Como administrador, quero criar produto com imagem e controlar fornecedor/estoque. | Produto, imagem, fornecedor, associação e saldo devem ser criados ou alterados com evidência funcional.                                    |
 | HU-S06-05 | Como equipe do projeto, queremos comprovar o avanço do MVP.                       | Evidências devem conter commits, prints, resultados de teste e pendências remanescentes.                                                    |
 
+### Rotina de dailies da Sprint #06
+
+| Item | Registro |
+|---|---|
+| Frequência | Semanal |
+| Horário previsto | 21h às 22h30 |
+| Extensão eventual | Até aproximadamente 23h |
+| Registro de progresso | Logs, branches e commits do GitHub |
+| Canais de alinhamento | WhatsApp e encontros presenciais quando necessário |
+
 ### Testes e validação
 
 | Item solicitado                         | Status    | Evidência/ação                                                                                |
@@ -425,7 +441,7 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 
 | Pendência                     | Motivo                                                                                            | Ação recomendada                                                                                           |
 | ------------------------------ | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Registro detalhado das dailies | As conversas ocorreram por WhatsApp e presencialmente                                             | Consolidar data, progresso, impedimentos e plano quando houver ata formal                                    |
+| Registro detalhado das dailies | Os alinhamentos são semanais, normalmente das 21h às 22h30, com extensão eventual até 23h; o progresso é acompanhado pelos logs do GitHub | Consolidar data, progresso, impedimentos e plano quando houver ata formal |
 | Evidências visuais            | Prints centralizadas no Google Docs, assets locais em `docs/assets` e vídeo não listado no YouTube | Manter Google Docs, assets locais e link do vídeo como evidências complementares |
 | Testes automatizados           | Relatório de testes automatizados ainda não foi anexado                                         | Executar testes existentes ou documentar teste manual funcional                                              |
 | Rotas oficiais do backend      | Existem routers legados montados no `main.py` e estrutura adicional em `app/api/v1/router.py` | Consolidar ou documentar oficialmente a rota principal                                                       |

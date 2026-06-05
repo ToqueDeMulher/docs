@@ -24,8 +24,10 @@ O projeto evoluiu para um MVP navegável no frontend e uma base backend mais amp
 - páginas institucionais, ajuda, sobre e página de erro;
 - área administrativa protegida por `RequireAdmin`;
 - dashboard administrativo e cadastro de produto com upload de imagem;
-- páginas de gamificação (`missões` e `ranking`);
+- páginas de gamificação de produtos (`missões` e `ranking`);
 - tema claro/escuro, refinamentos de estilo e melhorias de UI/UX registradas até 24/05/2026;
+- identidade visual ajustada a pedido da cliente, com preto como cor predominante no lugar do rosa;
+- fontes ajustadas de `Inter` para `All Round Gothic` e `Noto Sans`;
 - centralização de serviços em `apiClient`, `authService`, `productService` e `addressService`.
 
 ### Backend
@@ -44,6 +46,8 @@ O projeto evoluiu para um MVP navegável no frontend e uma base backend mais amp
 ## Evidência visual
 
 O mockup de alta fidelidade, os prints de organização/integração e o vídeo não listado do site foram registrados em [Protótipo e Evidências Visuais](prototipo.md). Eles servem como referência para comparar a direção visual planejada com as telas implementadas e para comprovar avanços técnicos do frontend/backend.
+
+As mudanças visuais principais em relação ao mockup foram a troca da predominância do rosa para o preto, a pedido da cliente, a troca de `Inter` por `All Round Gothic` e `Noto Sans`, e a inclusão da gamificação de produtos. O restante da estrutura visual foi mantido.
 
 ## Integração validada
 
