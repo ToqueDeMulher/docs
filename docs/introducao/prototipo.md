@@ -26,15 +26,15 @@ Esse link deve ser usado como evidência visual da navegação e do estado atual
 
 ## Prints anexados
 
-| Asset | Tipo de evidência | Observação |
-|---|---|---|
-| `figma_altafidelidade.png` | Mockup de alta fidelidade | Referência visual do Figma/protótipo |
-| `githubproject_frontend.png` | Evidência de organização | Print do projeto/repositório frontend |
-| `githubproject_frontend2.png` | Evidência de organização | Segundo print do projeto/repositório frontend |
-| `githubproject_backend.png` | Evidência de organização | Print do projeto/repositório backend |
-| `githubproject_backend2.png` | Evidência de organização | Segundo print do projeto/repositório backend |
-| `integracao_backend.jpeg` | Evidência técnica | Print de integração/execução backend |
-| `integracao_backend2.jpeg` | Evidência técnica | Segundo print de integração/execução backend |
+| Asset                           | Tipo de evidência          | Observação                                     |
+| ------------------------------- | --------------------------- | ------------------------------------------------ |
+| `figma_altafidelidade.png`    | Mockup de alta fidelidade   | Referência visual do Figma/protótipo           |
+| `githubproject_frontend.png`  | Evidência de organização | Print do projeto/repositório frontend           |
+| `githubproject_frontend2.png` | Evidência de organização | Segundo print do projeto/repositório frontend   |
+| `githubproject_backend.png`   | Evidência de organização | Print do projeto/repositório backend            |
+| `githubproject_backend2.png`  | Evidência de organização | Segundo print do projeto/repositório backend    |
+| `integracao_backend.jpeg`     | Evidência técnica         | Print de integração/execução backend         |
+| `integracao_backend2.jpeg`    | Evidência técnica         | Segundo print de integração/execução backend |
 
 ### Evidências de organização do frontend
 
