@@ -23,6 +23,24 @@ Links dos repositórios usados como registro técnico:
 - Backend: [https://github.com/ToqueDeMulher/toquedemulher-backend](https://github.com/ToqueDeMulher/toquedemulher-backend)
 - Documentação: [https://github.com/ToqueDeMulher/docs](https://github.com/ToqueDeMulher/docs)
 
+## Resumo executivo
+
+O projeto avançou de uma base inicial para um MVP navegável, com loja, catálogo, carrinho, checkout visual, login, perfil, endereço, painel administrativo, cadastro de produto, gamificação e documentação organizada. O backend também evoluiu bastante, cobrindo usuários, produtos, pagamentos, fornecedores e estoque.
+
+O principal ponto de atenção é que o MVP ainda não está pronto para operação comercial completa. A loja funciona bem para demonstração, mas os fluxos de compra, pagamento, pedido, estoque, endereço e produto administrativo ainda precisam ser validados de ponta a ponta.
+
+| Sprint | Leitura direta |
+|---|---|
+| Sprint #01 | Organização inicial do projeto, documentação base e primeira estrutura de frontend/backend |
+| Sprint #02 | Avanço do MVP com autenticação, checkout, pagamento, dashboard e documentação consolidada |
+| Sprint #03 | Melhoria da experiência da loja: busca, endereço, tema, acessibilidade, segurança e início de estoque |
+| Sprint #04 | Forte evolução operacional do backend: fornecedores, estoque, associação fornecedor-produto e controle admin |
+| Sprint #05 | Ajustes de integração, autenticação, layout, identidade visual e alinhamento frontend-backend |
+| Sprint #06 | Planejamento de fechamento: validação ponta a ponta, evidências e definição de rotas oficiais |
+| Sprint #07 | Revisão final de julho: frontend mais maduro, documentação atualizada e pendências reais mapeadas |
+
+Em participação, a leitura geral é objetiva: **Maria teve maior peso em frontend e documentação**, **GuHenriquee/Gustavo teve maior peso no backend**, **ccarolmdlima liderou a consolidação técnica mais recente da documentação**, e os demais integrantes contribuíram em frentes específicas como busca, endereço, acessibilidade, tema, segurança e dependências.
+
 ## Visão geral por sprint
 
 | Sprint     | Período inferido pelos commits | Foco principal                                                                                                | Status                |
@@ -286,7 +304,7 @@ Os logs mostram que a Sprint #05 deixou de ser apenas planejada: houve atualiza�
 | Item solicitado                          | Status             | Evidência/ação                                                                               |
 | ---------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------- |
 | Tarefas do Sprint Backlog em execução  | Em finalização | Autenticação e prefixo de API ajustados; base backend operacional mergeada; frontend refinado |
-| Funcionalidades implementadas e testadas | Parcial/concluído | Registro, login e get de usuário integrados e funcionando; demais fluxos aguardam evidência final |
+| Funcionalidades implementadas e testadas | Parcial | Registro, login e perfil implementados, mas com contrato final a validar; demais fluxos aguardam evidência final |
 | Atualizações registradas               | Concluído         | Commits registrados em frontend, backend e docs                                                 |
 | Backlog ajustado conforme necessário    | Concluído/parcial | Sprint #06 deve focar evidências finais, rotas oficiais e validação dos fluxos restantes     |
 
@@ -420,69 +438,58 @@ Consolidar o fechamento documental e técnico do MVP, validar os fluxos ponta a 
 
 | Item solicitado                         | Status    | Evidência/ação                                                                                |
 | --------------------------------------- | --------- | ------------------------------------------------------------------------------------------------ |
-| Testes funcionais realizados            | Parcial   | Registro, login e consulta de usuário estão integrados e funcionando; executar endereço, produto, estoque, fornecedor, checkout e pagamento |
+| Testes funcionais realizados            | Parcial   | Registro, login e perfil existem, mas ainda precisam de contrato final; executar endereço, produto, estoque, fornecedor, checkout e pagamento |
 | Correções aplicadas conforme feedback | Pendente  | Registrar commits de correção durante a sprint                                                 |
 | Evidências dos testes registradas      | Parcial   | Assets locais registrados em `docs/assets` e vídeo não listado anexado; faltam resultados formais de teste |
 
 ### Checklist final da Sprint #06
 
-- [X] Endpoints oficiais definidos.
-- [X] Autenticação implementada, mas com revalidação de contrato pendente em 31/07/2026.
+- [ ] Endpoints oficiais definidos.
+- [ ] Autenticação implementada, mas com revalidação de contrato pendente em 31/07/2026.
 - [ ] Cadastro de endereço validado.
 - [ ] Produto e upload de imagem validados.
 - [ ] Fornecedor e associação fornecedor-produto validados.
-- [X] Estoque e movimentação validados.
+- [ ] Estoque e movimentação validados.
 - [ ] Checkout, pedido e pagamento validados.
 - [X] Mockup de alta fidelidade usado como referência visual.
 - [X] Prints de organização frontend/backend anexados em `docs/assets`.
 - [X] Prints de integração backend anexados em `docs/assets`.
 - [X] Vídeo não listado do site registrado.
-- [X] Evidências funcionais com resultado esperado/obtido documentadas.
+- [ ] Evidências funcionais com resultado esperado/obtido documentadas.
 - [ ] Documentação final da sprint atualizada após validação funcional.
 
 ## Sprint #07
 
 ### Objetivo da sprint
 
-Atualizar a visão real do projeto depois da retomada de julho, registrando os commits mais recentes, a participação por área, o que foi entregue e os pontos em que o código ainda não confirma totalmente o que está previsto na documentação.
+Atualizar a visão real do projeto em julho, deixando claro o que avançou, quem participou mais e o que ainda precisa ser fechado para transformar o MVP em uma entrega integrada.
 
-### Branches e commits de evidência
+### Entregas registradas
 
-| Repositório | Branch | Evidências |
+| Frente | O que foi feito | Resultado para o projeto |
 |---|---|---|
-| `toquedemulher-frontend` | `main`, `feat/dark-mode-themes` | `f4fc4dc` refatora carrinho/gamificação, rotas e API client; `85d4543` ajusta tipos de autenticação e normalização; `fcaca5b` melhora footer, branding e confetti no checkout; `33e97e0` implementa theme switcher no perfil e melhora categoria |
-| `toquedemulher-backend` | `origin/backend-review` | `ebc69ac` melhora autenticação de usuário e endpoints de produto; a branch ainda não aparece como `main` local |
-| `docs` | `main`, `docs/consolidacao-plano-projeto` | `0bd74f1` reorganiza README/sidebar; `9ca79c3` a `c3e9bd4` consolidam escopo, requisitos, arquitetura, modelo de dados, fluxos, tecnologias, testes, desafios e sidebar |
+| Frontend | Refinamento de layout, footer, tema, carrinho, checkout visual, autenticação, rotas e gamificação | A loja ficou mais completa e navegável para demonstração do MVP |
+| Backend | Revisão de autenticação e produtos em branch separada | Existe avanço técnico, mas ainda precisa ser consolidado na base principal |
+| Documentação | Atualização de requisitos, arquitetura, fluxos, modelo de dados, testes e desafios | A documentação passou a refletir melhor o estado real do projeto |
+| Auditoria geral | Comparação entre código, documentação e commits | Ficou claro o que está pronto, o que está parcial e o que ainda precisa de validação |
 
-### Desenvolvimento da Sprint #07
+### O que está coerente
 
-| Item | Resultado |
-|---|---|
-| Refinamento do frontend | Houve reorganização de providers, rotas, `api-client`, contexto de carrinho, contexto de gamificação, autenticação, footer, checkout visual e tema |
-| Revisão backend | Há evolução em branch de revisão, mas a `main` local ainda monta os routers legados diretamente em `app/main.py` |
-| Consolidação documental | A documentação foi ampliada em 31/07 com requisitos, arquitetura, fluxos, modelo de dados, tecnologias, testes e desafios |
-| Auditoria de consistência | A leitura do código confirma parte relevante do escopo, mas também mostra pendências de integração e contratos |
+- O projeto já tem uma loja navegável, com catálogo, busca, carrinho, checkout visual, login, perfil, endereço, área administrativa, cadastro de produto e gamificação.
+- O backend já cobre as principais áreas do negócio: usuários, produtos, pagamentos, endereços, fornecedores e estoque.
+- A documentação está alinhada com a decisão técnica real do projeto: frontend em React e backend em FastAPI/Python.
+- O MVP já tem boa base para apresentação, mas ainda não deve ser tratado como operação comercial completa.
 
-### O que faz sentido entre código e documentação
+### Pontos de atenção
 
-- A stack documentada está coerente com o código atual: React, TypeScript, Vite e Axios no frontend; FastAPI, Python, Pydantic, JWT, SQLAlchemy/SQLModel e PostgreSQL no backend.
-- O frontend possui telas e rotas compatíveis com o MVP: home, catálogo, categoria, produto, busca, carrinho, checkout visual, login/cadastro, perfil, endereço, painel admin, cadastro de produto, missões e ranking.
-- O backend possui modelos e routers para usuários, endereços, produtos, pagamentos, fornecedores, associação fornecedor-produto e estoque.
-- A documentação registra corretamente a divergência histórica entre o planejamento inicial com Node.js e a implementação real em FastAPI/Python.
-- O relatório de desafios está coerente ao apontar integração frontend-backend, autenticação, pagamentos, estoque e documentação como pontos críticos.
-
-### Pontos que ainda não fecham com o código
-
-| Tema | Situação encontrada em 31/07/2026 | Impacto |
+| Tema | Situação atual | Impacto no negócio |
 |---|---|---|
-| Rotas oficiais backend | `app/main.py` monta routers legados diretamente; `app/api/v1/router.py` existe, mas não é incluído no `main.py` | A API oficial ainda precisa ser consolidada |
-| API nova | `app/api/v1/endpoints/products.py` possui erro de sintaxe por mistura de tabs e espaços; alguns endpoints novos importam nomes de modelos que não existem no código atual | A árvore nova `/auth`, `/users`, `/products`, `/orders`, `/payments` e `/reviews` não deve ser tratada como pronta |
-| Autenticação frontend-backend | O frontend chama `/api/v1/user/login`, `/api/v1/user/register` e `/api/v1/user/me`; as rotas existem, mas o login backend não retorna `refresh_token` e o `/me` legado não retorna `id` nem `role` | Login pode funcionar parcialmente, mas perfil/admin e normalização de usuário precisam de contrato ajustado |
-| Produtos admin | O frontend envia payload no formato da API nova em `/api/v1/products`, enquanto o backend ativo expõe `/products` e espera outro payload, incluindo `slug` | Cadastro de produto admin não está comprovado ponta a ponta |
-| Endereço | O frontend usa `/api/v1/addresses`; o backend ativo monta `/addresses` sem o prefixo `/api/v1` | Cadastro de endereço precisa ajuste de rota ou prefixo |
-| Checkout e pedido | O checkout frontend valida dados localmente, confirma pedido, limpa carrinho e aplica gamificação sem chamar API de pedido/pagamento | Fluxo comercial completo continua parcial |
-| Estoque e pagamento | O checkout backend reduz estoque antes da confirmação efetiva do pagamento; a documentação descreve baixa após confirmação/webhook | Regra de negócio precisa revisão para evitar baixa indevida |
-| Testes automatizados | Existe `tests/test_auth.py`, mas ele espera `/api/v1/auth`, `/api/v1/users/me` e `/health`, que não são montados no `main.py` atual; `pytest` não está instalado no ambiente local | Testes estão desatualizados ou não executáveis no snapshot atual |
+| Integração frontend-backend | Algumas telas chamam rotas ou formatos diferentes dos que o backend entrega hoje | Funcionalidades podem parecer prontas na tela, mas falhar no uso real |
+| Autenticação | Cadastro e login existem, mas a resposta do backend ainda não entrega todos os dados que o frontend espera | Perfil, sessão e acesso administrativo precisam de ajuste final |
+| Produtos e endereços | Existem telas e rotas, mas os contratos ainda não estão totalmente alinhados | Cadastro administrativo e endereço precisam de validação real |
+| Checkout | O frontend finaliza visualmente, mas ainda não registra pedido/pagamento de ponta a ponta | A compra ainda não está pronta para operação comercial |
+| Estoque e pagamento | A regra de baixa de estoque precisa ser validada junto com a confirmação do pagamento | Há risco de inconsistência entre venda, pagamento e estoque |
+| Testes | Há testes no repositório, mas eles não representam o estado atual da aplicação | Falta evidência formal para declarar o MVP fechado |
 
 ### Participação por área
 
@@ -490,14 +497,14 @@ As contagens abaixo vêm dos metadados do Git. Elas indicam volume registrado, n
 
 | Área | Maior participação registrada | Outros participantes relevantes | Leitura |
 |---|---|---|---|
-| Frontend | Maria, com 36 commits somando os aliases `eguchi@ibm.com` e `maryeguchi6@gmail.com` | João Gabriel, Zouares, Jpzin1, GuHenriquee e Maria Eduarda | Maria concentrou a maior parte da construção e refinamento visual/UX; João Gabriel atuou em busca; Zouares em navegação e endereço; Jpzin1 em tema/acessibilidade |
-| Backend | GuHenriquee/Gustavo Henrique, com 43 commits no mesmo e-mail `gguu.henri@gmail.com` | Matheus Musashi, Maria, Manus AI e Maria Eduarda | GuHenriquee liderou a evolução funcional do backend: pagamentos, usuários, endereços, fornecedores e estoque; Matheus concentrou correções de segurança/dependências |
-| Documentação | Maria, com 33 commits nos aliases `eguchi@ibm.com` e `maryeguchi6@gmail.com` | ccarolmdlima/Carolina, Marichoii/Maria Eduarda e Manus AI | Maria manteve a documentação histórica; ccarolmdlima liderou a consolidação técnica de 31/07 |
-| Visão geral | Maria aparece como maior participação transversal em frontend e documentação; GuHenriquee aparece como maior participação técnica de backend | Equipe distribuída por especialidade | A evolução do projeto ficou concentrada em Maria no frontend/docs e GuHenriquee no backend |
+| Frontend | Maria | João Gabriel, Zouares, Jpzin1, GuHenriquee e Maria Eduarda | Maria concentrou a maior parte da construção e do refinamento visual. João Gabriel atuou na busca, Zouares em navegação/endereço e Jpzin1 em tema/acessibilidade |
+| Backend | GuHenriquee/Gustavo Henrique | Matheus Musashi, Maria, Manus AI e Maria Eduarda | GuHenriquee liderou a evolução funcional do backend. Matheus atuou principalmente em correções de segurança e dependências |
+| Documentação | Maria | ccarolmdlima/Carolina, Marichoii/Maria Eduarda e Manus AI | Maria manteve o histórico e a estrutura geral. ccarolmdlima liderou a consolidação técnica de 31/07 |
+| Visão geral | Maria e GuHenriquee | Equipe distribuída por especialidade | Maria teve maior peso em frontend/documentação; GuHenriquee teve maior peso no backend |
 
 ### Status da Sprint #07
 
-Sprint **em validação**. O frontend compila em TypeScript (`npx tsc --noEmit`) e a documentação foi atualizada. O backend foi analisado estaticamente, mas não foi executado porque as dependências Python não estão instaladas no ambiente local. A checagem de sintaxe apontou erro em `app/api/v1/endpoints/products.py`, e os contratos frontend-backend ainda precisam ser fechados antes de declarar o MVP como integrado.
+Sprint **em validação**. O frontend está consistente para demonstração, e a documentação foi atualizada. O backend ainda precisa de ajustes e validação integrada antes de o MVP ser considerado pronto para operação real.
 
 ## Pendências para fechamento formal
 

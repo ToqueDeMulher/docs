@@ -254,8 +254,8 @@ A arquitetura representa a direção técnica do sistema.
 
 Entretanto, a presença de um componente ou fluxo no diagrama não significa que ele esteja completamente validado em funcionamento.
 
-Os fluxos de registro, login e consulta do usuário autenticado possuem implementação no frontend e no backend legado, mas precisam de revalidação de contrato porque as respostas atuais não batem totalmente com os tipos esperados pelo frontend.
+Os fluxos de registro, login e perfil já estão implementados, mas ainda precisam de validação integrada final.
 
-Outros fluxos, como catálogo conectado à API, endereço, produto administrativo, pedido, pagamento, webhook e baixa automática de estoque, ainda precisam de validação completa de ponta a ponta.
+Os demais fluxos críticos, como catálogo conectado à API, endereço, produto administrativo, pedido, pagamento, webhook e baixa de estoque, ainda precisam ser comprovados de ponta a ponta.
 
 Para mais informações, consulte [Status Atual da Implementação](../introducao/status_atual.md).

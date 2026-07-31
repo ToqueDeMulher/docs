@@ -44,15 +44,15 @@ O relatório informa que testes beta formais com stakeholders reais ainda não f
 
 Essa etapa permanece prevista para o futuro.
 
-## Integrações observadas
+## Validação atual
 
 | Fluxo | Situação |
 |---|---|
-| Registro de usuário | Parcialmente alinhado entre frontend e backend legado |
-| Login | Parcialmente alinhado; backend retorna token de acesso, mas o frontend também espera `refresh_token` |
-| Consulta do usuário autenticado | Parcialmente alinhada; o frontend espera `id` e `role`, que não aparecem no schema legado atual |
-| Frontend TypeScript | Validado com `npx tsc --noEmit` em 31/07/2026 |
-| Backend runtime/testes | Não validado localmente por ausência de dependências Python instaladas |
+| Frontend | Verificado estaticamente e sem erros de TypeScript |
+| Cadastro e login | Implementados, mas ainda precisam de contrato final validado |
+| Perfil do usuário | Implementado, mas precisa confirmar dados e permissões vindos do backend |
+| Endereço, produto, checkout, pagamento e estoque | Ainda precisam de teste integrado |
+| Backend | Precisa ser executado em ambiente com dependências instaladas |
 
 ## Fluxos que ainda precisam de evidência completa
 
@@ -68,9 +68,9 @@ Essa etapa permanece prevista para o futuro.
 
 ## Testes automatizados
 
-A documentação atual não possui um relatório consolidado de testes automatizados executados com sucesso.
+A documentação atual ainda não possui um relatório consolidado de testes automatizados executados com sucesso.
 
-O backend possui `tests/test_auth.py`, mas o arquivo espera rotas da API nova (`/api/v1/auth`, `/api/v1/users/me` e `/health`) que não estão montadas no `app/main.py` atual. Portanto, esses testes precisam ser revisados antes de servirem como evidência formal.
+O backend possui testes versionados, mas eles precisam ser atualizados para refletir as rotas realmente usadas pela aplicação. Até essa revisão, os testes não devem ser usados como prova formal de fechamento do MVP.
 
 Permanecem recomendados:
 
