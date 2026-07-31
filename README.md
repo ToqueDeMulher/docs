@@ -1,133 +1,84 @@
-# Documentação do Projeto Toque de Mulher
+# Toque de Mulher - Documentação do Projeto
 
-Este repositório concentra a documentação executiva e funcional do projeto Toque de Mulher. O conteúdo foi consolidado a partir dos arquivos `Plano de Projeto - 2025`, `Plano de Projeto Cliente` e `Plano de Futuro e Otimização - 2026`, com complemento do estado real do código versionado até **31 de julho de 2026**.
+Este repositório reúne a documentação do projeto **Toque de Mulher**, uma plataforma de e-commerce para cosméticos e cuidados pessoais.
 
-## Página para GitHub Pages
+A documentação mostra o que foi planejado, o que já foi desenvolvido, o que ainda está em validação e quais são os próximos passos para transformar o MVP em uma operação comercial completa.
 
-A documentação pode ser acessada também pela versão publicada no **GitHub Pages**, utilizando como página inicial:
+## Status do projeto
 
-- [index.html](index.html)
+O projeto já possui uma base sólida de MVP:
 
-Esse arquivo é a entrada recomendada para publicação no GitHub Pages.
+- loja navegável;
+- catálogo, busca, carrinho e checkout visual;
+- login, cadastro, perfil e endereço;
+- área administrativa e cadastro de produto;
+- gamificação;
+- backend com base para usuários, produtos, pagamentos, fornecedores e estoque;
+- documentação consolidada por escopo, requisitos, arquitetura, testes, riscos e sprints.
 
-## Visão Geral
+O MVP, porém, ainda está **em validação**. A loja está boa para demonstração, mas os fluxos de compra, pedido, pagamento, estoque, endereço e produto administrativo ainda precisam ser comprovados de ponta a ponta antes de uso comercial real.
 
-A documentação principal fica em `docs/` e está organizada por tema:
+## Leitura rápida das sprints
 
-| Local | Conteúdo |
-|--------|----------|
-| `introducao/` | Contexto, objetivos, escopo, protótipo e status técnico atual |
-| `introducao/prototipo.md` | Registro do mockup, prints de evidência e vídeo não listado do site. |
-| `roadmap.md` | Evolução planejada do MVP até as otimizações futuras. |
-| `sprints.md` | Histórico das sprints, entregas e evidências |
-| `equipe/` | Stakeholders, papéis e responsabilidades |
-| `financeiro/` | Visão de orçamento do MVP e custos previstos |
-| `riscos_e_dependencias/` | Restrições, premissas, riscos e dependências |
-| `aprovacao/` | Registro consolidado de aprovação |
-| `glossario.md` | Termos técnicos e de negócio |
-| `contributing.md` | Guia de contribuição da documentação |
+| Sprint    | Principal entrega                                                                      |
+| --------- | -------------------------------------------------------------------------------------- |
+| Sprint#01 | Organização inicial do projeto, documentação base e estrutura técnica             |
+| Sprint#02 | Avanço do MVP com autenticação, checkout, pagamento e dashboard                     |
+| Sprint#03 | Busca, endereço, tema, acessibilidade, segurança e início de estoque                |
+| Sprint#04 | Fornecedores, estoque, associação fornecedor-produto e controle admin                |
+| Sprint#05 | Ajustes de integração, identidade visual, autenticação e layout                    |
+| Sprint#06 | Planejamento de fechamento, validação ponta a ponta e evidências                    |
+| Sprint#07 | Revisão final de julho, frontend mais maduro, docs atualizados e pendências mapeadas |
 
-## Como Consultar
+## Participação geral
 
-Os documentos principais podem ser acessados pelos links abaixo:
+A leitura dos commits mostra a seguinte distribuição principal:
 
-### Introdução
+- **Maria Eduarda:** maior participação em frontend e documentação;
+- **Gustavo Henrique:** maior participação no backend;
+- **Carolina:** liderança na consolidação técnica mais recente da documentação;
+- **João Gabriel:** contribuições em busca;
+- **Gabriel Soares:** contribuições em navegação e endereço;
+- **João Pedro:** contribuições em tema e acessibilidade;
+- **Matheus Musashi:** correções de segurança e dependências no backend.
 
-- [Contexto e Justificativa](docs/introducao/contexto.md)
-- [Objetivos Estratégicos e KPIs](docs/introducao/objetivos.md)
+Essas informações vêm dos metadados do Git e indicam participação registrada em commits, não todo o trabalho feito fora do repositório.
+
+## Principais documentos
+
+- [Status atual da implementação](docs/introducao/status_atual.md)
+- [Acompanhamento das sprints](docs/sprints.md)
 - [Escopo do MVP](docs/introducao/escopo.md)
-- [Status Atual da Implementação](docs/introducao/status_atual.md)
-- [Protótipo e Evidências Visuais](docs/introducao/prototipo.md)
+- [Objetivos e KPIs](docs/introducao/objetivos.md)
+- [Requisitos do sistema](docs/desenvolvimento/requisitos.md)
+- [Arquitetura do sistema](docs/desenvolvimento/arquitetura.md)
+- [Fluxos principais](docs/desenvolvimento/fluxos.md)
+- [Testes e validações](docs/desenvolvimento/testes.md)
+- [Desafios encontrados](docs/desenvolvimento/desafios.md)
+- [Roadmap estratégico](docs/roadmap.md)
 
-### Planejamento
+## Tecnologias utilizadas
 
-- [Roadmap Estratégico](docs/roadmap.md)
-- [Acompanhamento das Sprints](docs/sprints.md)
+| Frente         | Tecnologias principais          |
+| -------------- | ------------------------------- |
+| Frontend       | React, TypeScript, Vite, Axios  |
+| Backend        | Python, FastAPI, Pydantic, JWT  |
+| Banco de dados | PostgreSQL, SQLAlchemy, Alembic |
+| Documentação | Markdown, GitHub Pages          |
 
-### Equipe
+## Como consultar
 
-- [Stakeholders](docs/equipe/stakeholders.md)
-- [Funções da Equipe](docs/equipe/funcao_equipe.md)
+Para entender o projeto rapidamente, comece por:
 
-### Gestão
+1. [Status atual da implementação](docs/introducao/status_atual.md)
+2. [Acompanhamento das sprints](docs/sprints.md)
+3. [Escopo do MVP](docs/introducao/escopo.md)
+4. [Roadmap estratégico](docs/roadmap.md)
 
-- [Orçamento do Projeto](docs/financeiro/orcamento.md)
-- [Premissas](docs/riscos_e_dependencias/premissas.md)
-- [Restrições](docs/riscos_e_dependencias/restricoes.md)
-- [Riscos e Dependências](docs/riscos_e_dependencias/riscos_e_dependencias.md)
+## Publicação
 
-### Documentos
-
-- [Assinaturas de Aprovação](docs/aprovacao/assinaturas_aprovacao.md)
-- [Glossário](docs/glossario.md)
-- [Guia de Contribuição](docs/contributing.md)
-
-## Tecnologias Utilizadas
-
-O projeto é desenvolvido utilizando tecnologias modernas para frontend, backend e banco de dados.
-
-### Frontend
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Axios
-
-### Backend
-
-- Python
-- FastAPI
-- Pydantic
-- JWT
-- Bcrypt
-
-### Banco de Dados
-
-- PostgreSQL
-- SQLAlchemy
-- Alembic
-
-### Integrações Externas
-
-- Mercado Pago
-- SMTP
-
-### Ferramentas de Desenvolvimento
-
-- Git & GitHub
-- GitHub Pages
-
-> A documentação descreve a evolução do projeto, independentemente da tecnologia utilizada em cada módulo.
-
-## Estrutura do Repositório
-
-```text
-.
-|-- LICENSE
-|-- README.md
-`-- docs
-    |-- _sidebar.md
-    |-- assets
-    |-- aprovacao
-    |-- contributing.md
-    |-- equipe
-    |-- financeiro
-    |-- glossario.md
-    |-- introducao
-    |-- riscos_e_dependencias
-    |-- roadmap.md
-    `-- sprints.md
-```
-
-## Nota de Consolidação
-
-Esta documentação substitui materiais redundantes mantidos fora da estrutura principal. O objetivo é manter uma única fonte de verdade para estratégia, escopo e acompanhamento do projeto.
-
-## Contribuição
-
-As diretrizes de contribuição estão em [Guia de Contribuição](docs/contributing.md).
+A documentação pode ser publicada pelo GitHub Pages usando o arquivo [index.html](index.html) como entrada.
 
 ---
 
-*Última atualização: 31 de julho de 2026*
+**Última atualização:** 31 de julho de 2026.
