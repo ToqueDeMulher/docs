@@ -75,6 +75,6 @@ Eles envolvem a comunicação entre frontend, backend, banco de dados e serviço
 
 ## Situação de validação
 
-Os fluxos de registro, login e consulta do usuário autenticado possuem integração documentada como funcional.
+Os fluxos de registro, login e consulta do usuário autenticado possuem implementação no frontend e no backend legado, mas a revisão de 31/07/2026 identificou divergências de contrato nas respostas de autenticação e perfil.
 
-Os fluxos de catálogo, endereço, pedidos, pagamento e baixa automática de estoque ainda precisam de evidências completas de validação de ponta a ponta.
+Os fluxos de catálogo, endereço, produtos administrativos, pedidos, pagamento e baixa automática de estoque ainda precisam de evidências completas de validação de ponta a ponta.

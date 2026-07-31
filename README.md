@@ -1,6 +1,6 @@
 # Documentação do Projeto Toque de Mulher
 
-Este repositório concentra a documentação executiva e funcional do projeto Toque de Mulher. O conteúdo foi consolidado a partir dos arquivos `Plano de Projeto - 2025`, `Plano de Projeto Cliente` e `Plano de Futuro e Otimização - 2026`, com complemento do estado real do código versionado até **24 de maio de 2026**.
+Este repositório concentra a documentação executiva e funcional do projeto Toque de Mulher. O conteúdo foi consolidado a partir dos arquivos `Plano de Projeto - 2025`, `Plano de Projeto Cliente` e `Plano de Futuro e Otimização - 2026`, com complemento do estado real do código versionado até **31 de julho de 2026**.
 
 ## Página para GitHub Pages
 
