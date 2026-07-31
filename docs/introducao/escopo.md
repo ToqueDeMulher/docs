@@ -1,6 +1,8 @@
 # Escopo do Projeto
 
-O foco inicial é a entrega de um **Produto Mínimo Viável (MVP)** com valor direto para a operação e para a venda online.
+## Visão geral
+
+O Produto Mínimo Viável do Toque de Mulher contempla as funcionalidades essenciais para validar a proposta de uma plataforma de e-commerce de cosméticos e cuidados pessoais.
 
 ## Dentro do escopo do MVP
 
@@ -16,15 +18,31 @@ O foco inicial é a entrega de um **Produto Mínimo Viável (MVP)** com valor di
 - design responsivo para desktop, tablet e mobile;
 - estrutura mínima de SEO e treinamento para uso da plataforma.
 
+## Entregas do projeto
+
+O escopo foi dividido nas seguintes áreas:
+
+1. Gestão e planejamento do projeto;
+2. Levantamento e documentação de requisitos;
+3. Prototipação da interface;
+4. Desenvolvimento do frontend;
+5. Desenvolvimento do backend;
+6. Modelagem e persistência de dados;
+7. Integração entre os módulos;
+8. Testes e validação;
+9. Documentação final.
+
 ## Fora do escopo desta fase
 
-Os documentos do projeto tratam os itens abaixo como evolução posterior:
+Os seguintes recursos permanecem como possíveis evoluções:
 
-- aplicativos móveis nativos;
-- integrações avançadas com ERP, CRM ou outros sistemas externos;
-- operação contínua de marketing digital e produção de conteúdo;
-- personalização avançada baseada em IA logo no MVP;
-- arquitetura omnichannel completa desde a primeira entrega.
+- aplicativo móvel nativo;
+- recomendações personalizadas com inteligência artificial;
+- funcionamento offline;
+- notificações push;
+- programa de fidelidade completo;
+- relatórios administrativos avançados;
+- infraestrutura distribuída em nuvem.
 
 ## Regra de priorização
 

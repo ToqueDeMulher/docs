@@ -5,6 +5,15 @@
   - [Status Atual](/introducao/status_atual.md)
   - [Protótipo e Evidências Visuais](/introducao/prototipo.md)
 
+- Desenvolvimento
+  - [Requisitos do Sistema](/desenvolvimento/requisitos.md)
+  - [Arquitetura do Sistema](/desenvolvimento/arquitetura.md)
+  - [Modelo de Dados](/desenvolvimento/modelo_dados.md)
+  - [Fluxos Principais](/desenvolvimento/fluxos.md)
+  - [Tecnologias Utilizadas](/desenvolvimento/tecnologias.md)
+  - [Testes e Validações](/desenvolvimento/testes.md)
+  - [Desafios Encontrados](/desenvolvimento/desafios.md)
+
 - Planejamento
   - [Roadmap Estratégico](/roadmap.md)
   - [Acompanhamento das Sprints](/sprints.md)

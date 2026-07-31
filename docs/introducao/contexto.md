@@ -1,6 +1,17 @@
 # Contexto do Projeto
 
+## Descrição do projeto
+
 Toque de Mulher é uma loja de cosméticos com foco em perfumes importados, maquiagem e itens de curadoria. O projeto nasce da necessidade de transformar uma operação ainda muito dependente do atendimento físico e de processos manuais em uma plataforma digital capaz de sustentar crescimento.
+
+A plataforma busca centralizar processos comerciais, como:
+
+- gestão do catálogo de produtos;
+- controle de estoque;
+- processamento de pedidos;
+- pagamentos;
+- atendimento ao cliente;
+- administração da operação.
 
 ## Justificativa de negócio
 
@@ -20,6 +31,18 @@ A plataforma digital proposta responde a duas frentes ao mesmo tempo:
 ## Posicionamento desejado
 
 O projeto não busca apenas "colocar a loja na internet". A meta é posicionar a Toque de Mulher como uma referência confiável em cosméticos originais, com experiência de compra organizada, catálogo bem apresentado e capacidade de evolução para recursos mais avançados de retenção e personalização.
+
+## Público-alvo
+
+O público-alvo principal é formado por consumidores interessados em cosméticos, skincare, beleza e autocuidado, especialmente pessoas que valorizam praticidade e conveniência em compras online.
+
+A solução também atende administradores e gestores responsáveis por:
+
+- produtos;
+- estoque;
+- pedidos;
+- pagamentos;
+- fornecedores;
 
 ## Base desta documentação
 
