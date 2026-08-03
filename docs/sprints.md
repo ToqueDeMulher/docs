@@ -39,7 +39,7 @@ O principal ponto de atenção é que o MVP ainda não está pronto para operaç
 | Sprint #06 | Planejamento de fechamento: validação ponta a ponta, evidências e definição de rotas oficiais |
 | Sprint #07 | Revisão final de julho: frontend mais maduro, documentação atualizada e pendências reais mapeadas |
 
-Em participação, a leitura geral é objetiva: **Maria teve maior peso em frontend e documentação**, **GuHenriquee/Gustavo teve maior peso no backend**, **ccarolmdlima liderou a consolidação técnica mais recente da documentação**, e os demais integrantes contribuíram em frentes específicas como busca, endereço, acessibilidade, tema, segurança e dependências.
+Em participação histórica, a leitura geral é objetiva: **Maria teve maior peso em frontend e documentação**, **GuHenriquee/Gustavo teve maior peso no backend**, **ccarolmdlima liderou a consolidação técnica mais recente da documentação**, e os demais integrantes contribuíram em frentes específicas como busca, endereço, acessibilidade, tema, segurança e dependências. Gustavo Henrique e João Gabriel aparecem como contribuições anteriores e não fazem mais parte do grupo atual.
 
 ## Visão geral por sprint
 
@@ -493,14 +493,14 @@ Atualizar a visão real do projeto em julho, deixando claro o que avançou, quem
 
 ### Participação por área
 
-As contagens abaixo vêm dos metadados do Git. Elas indicam volume registrado, não medem complexidade individual nem trabalho fora do commit.
+As contagens abaixo vêm dos metadados do Git. Elas indicam volume registrado, não medem complexidade individual nem trabalho fora do commit. Gustavo Henrique e João Gabriel aparecem nesta tabela por participação histórica, mas não fazem mais parte do grupo atual.
 
 | Área | Maior participação registrada | Outros participantes relevantes | Leitura |
 |---|---|---|---|
 | Frontend | Maria | João Gabriel, Zouares, Jpzin1, GuHenriquee e Maria Eduarda | Maria concentrou a maior parte da construção e do refinamento visual. João Gabriel atuou na busca, Zouares em navegação/endereço e Jpzin1 em tema/acessibilidade |
 | Backend | GuHenriquee/Gustavo Henrique | Matheus Musashi, Maria, Manus AI e Maria Eduarda | GuHenriquee liderou a evolução funcional do backend. Matheus atuou principalmente em correções de segurança e dependências |
 | Documentação | Maria | ccarolmdlima/Carolina, Marichoii/Maria Eduarda e Manus AI | Maria manteve o histórico e a estrutura geral. ccarolmdlima liderou a consolidação técnica de 31/07 |
-| Visão geral | Maria e GuHenriquee | Equipe distribuída por especialidade | Maria teve maior peso em frontend/documentação; GuHenriquee teve maior peso no backend |
+| Visão geral | Maria e GuHenriquee | Equipe distribuída por especialidade | Maria teve maior peso em frontend/documentação; GuHenriquee teve maior peso histórico no backend |
 
 ### Status da Sprint #07
 

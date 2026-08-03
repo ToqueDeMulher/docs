@@ -32,15 +32,15 @@ O MVP, porém, ainda está **em validação**. A loja está boa para demonstraç
 
 ## Participação geral
 
-A leitura dos commits mostra a seguinte distribuição principal:
+A leitura dos commits mostra a seguinte distribuição histórica:
 
 - **Maria Eduarda:** maior participação em frontend e documentação;
-- **Gustavo Henrique:** maior participação no backend;
 - **Carolina:** liderança na consolidação técnica mais recente da documentação;
-- **João Gabriel:** contribuições em busca;
 - **Gabriel Soares:** contribuições em navegação e endereço;
 - **João Pedro:** contribuições em tema e acessibilidade;
 - **Matheus Musashi:** correções de segurança e dependências no backend.
+
+Também há contribuições anteriores relevantes de **Gustavo Henrique** no backend e de **João Gabriel** na busca. Ambos não fazem mais parte do grupo atual.
 
 Essas informações vêm dos metadados do Git e indicam participação registrada em commits, não todo o trabalho feito fora do repositório.
 

@@ -6,7 +6,8 @@ Os principais stakeholders do projeto Toque de Mulher são os seguintes.
 
 - **Cliente e patrocinadora:** Láercia Holanda
 - **Gerente do projeto:** Maria Eduarda de Moura Eguchi
-- **Equipe de desenvolvimento e design:** João Pedro Holanda, Gustavo Henrique, Matheus Musashi Tanaka, Carolina Maikuma Dias Lima, João Gabriel Assunção e Gabriel Soares
+- **Equipe atual de desenvolvimento e design:** João Pedro Holanda, Matheus Musashi Tanaka, Carolina Maikuma Dias Lima e Gabriel Soares
+- **Participações anteriores:** Gustavo Henrique e João Gabriel Assunção
 
 ## Papel de cada grupo
 
