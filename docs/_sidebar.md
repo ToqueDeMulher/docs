@@ -38,3 +38,6 @@
 
 - Contribuição
   - [Contribuição](/contributing.md)
+
+- Inteligência Artificial
+  - [Uso de IA no Projeto](/uso_ia.md)
