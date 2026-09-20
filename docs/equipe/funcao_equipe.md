@@ -9,6 +9,7 @@ A distribuição de papéis atual do projeto é a seguinte:
 | Matheus Musashi Tanaka | Desenvolvedor Backend, DevOps, Fullstack, QA |
 | João Pedro Holanda | Desenvolvedor Frontend, Desenvolvedor Backend, Fullstack |
 | Carolina Maikuma Dias Lima | Designer UI/UX, QA |
+| Felipe Rodrigues | Desenvolvedor Backend, Fullstack |
 
 ## Participação anterior
 
