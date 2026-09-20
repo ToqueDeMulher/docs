@@ -1,18 +1,33 @@
 # Status Atual da Implementação
 
-Este documento registra o estado do projeto até **31 de julho de 2026**, considerando código, documentação e histórico de commits dos repositórios de frontend, backend e docs.
+Este documento registra o estado do projeto até **20 de setembro de 2026**, considerando código, documentação e histórico de commits dos repositórios de frontend, backend e docs.
 
 ## Resumo executivo
 
-O projeto já possui uma boa base de MVP: a loja é navegável, a identidade visual está mais madura e o backend cobre as principais áreas do negócio. Ainda assim, o MVP segue **parcial/em validação**, porque alguns fluxos existem na tela e no backend, mas ainda não estão totalmente conectados e comprovados de ponta a ponta.
+O projeto possui uma base funcional de e-commerce, incluindo catálogo, carrinho, checkout, autenticação, perfil do usuário, área administrativa e gamificação.
 
-## Arquitetura efetiva do snapshot
+O backend contempla funcionalidades relacionadas a usuários, produtos, pagamentos, endereços, fornecedores e estoque.
 
-- **Frontend:** loja web em React, com navegação, catálogo, carrinho, checkout visual, autenticação, área administrativa e gamificação.
-- **Backend:** API em FastAPI/Python, com base para usuários, produtos, pagamentos, fornecedores, endereços e estoque.
-- **Documentação:** materiais atualizados com sprints, status, requisitos, arquitetura, testes, desafios, protótipo e evidências visuais.
+Em setembro de 2026, os repositórios passaram por uma revisão técnica para remover estruturas sem utilização identificada, reduzir dependências, simplificar a autenticação e reforçar regras de segurança e integridade dos dados.
 
-> Observação importante: os documentos de planejamento citam `React + Node.js` como direção tecnológica, mas o código versionado usa `React + FastAPI/Python`.
+**Situação geral:** MVP em consolidação e validação integrada.
+
+A existência de uma funcionalidade no código não significa, por si só, que todos os seus cenários de uso tenham sido testados de ponta a ponta.
+
+## Arquitetura atual
+
+| Camada | Tecnologias e responsabilidades |
+|---|---|---|
+| Frontend | React, TypeScript e Vite; interface da loja, autenticação, carrinho, checkout e área administrativa |
+| Backend | Python e FastAPI; API, regras de negócio, autenticação e integrações |
+| Banco de dados | Persistência de usuários, produtos, endereços, pedidos, pagamentos, fornecedores e estoque |
+| Documentação | Markdown e repositório central de documentação do projeto |
+
+Divergência em relação ao planejamento: documentos iniciais mencionavam React e Node.js, mas a implementação efetiva utiliza React no frontend e FastAPI/Python no backend.
+
+### Configuração de desenvolvimento
+
+A porta documentada para execução do frontend foi corrigida de `5173` para `3000`, conforme a configuração atual do Vite.
 
 ## O que já está implementado
 
@@ -23,8 +38,9 @@ O projeto já possui uma boa base de MVP: a loja é navegável, a identidade vis
 - login, cadastro, perfil e tela de cadastro de endereço com autocompletar por CEP;
 - páginas institucionais, ajuda, sobre e página de erro;
 - área administrativa protegida por `RequireAdmin`;
-- dashboard administrativo e cadastro de produto com upload de imagem;
-- páginas de gamificação de produtos (`missões` e `ranking`);
+- dashboard administrativo integrado a dados de pedidos e pagamentos;
+- cadastro de produto com upload de imagem;
+- funcionalidades de gamificação de produtos (`missões` e `ranking`);
 - tema claro/escuro, refinamentos de estilo, footer revisado, confetti no checkout e melhorias de UI/UX registradas até 27/07/2026;
 - identidade visual ajustada a pedido da cliente, com preto como cor predominante no lugar do rosa;
 - fontes ajustadas de `Inter` para `All Round Gothic` e `Noto Sans`;
@@ -51,26 +67,100 @@ O mockup de alta fidelidade, os prints de organização/integração e o vídeo 
 
 As mudanças visuais principais em relação ao mockup foram a troca da predominância do rosa para o preto, a pedido da cliente, a troca de `Inter` por `All Round Gothic` e `Noto Sans`, e a inclusão da gamificação de produtos. O restante da estrutura visual foi mantido.
 
+## Atualizações técnicas de setembro de 2026
+
+### Limpeza e simplificação do frontend
+
+Foi realizada uma revisão da base de código para remover recursos sem utilização identificada na aplicação atual.
+
+As alterações incluíram:
+
+- remoção de componentes antigos de skeleton/loading;
+- remoção de estilos CSS legados do storefront;
+- remoção do Navigation Menu do Radix e da dependência correspondente;
+- remoção de imagens sem referências identificadas;
+- remoção de outros componentes e dependências sem uso;
+- correção da documentação da porta de desenvolvimento para `3000`.
+
+A revisão teve como objetivo reduzir código desnecessário e facilitar a manutenção da aplicação, preservando os fluxos ativos.
+
+### Simplificação da autenticação no frontend
+
+O frontend passou a trabalhar apenas com access token.
+
+O refresh token foi removido porque não existia um fluxo ativo de renovação que o utilizasse. A aplicação também passou a limpar refresh tokens antigos que eventualmente permanecessem armazenados localmente.
+
+O comportamento após a expiração do access token deve seguir o fluxo de autenticação implementado na aplicação.
+
+### Limpeza e simplificação do backend
+
+Foram removidas estruturas experimentais e legadas que não integravam a API ativa, incluindo implementações antigas ou duplicadas relacionadas a autenticação, carrinho e pedidos.
+
+Também foram removidos:
+
+- configuração antiga do Alembic;
+- modelos e tabelas legadas vazias;
+- templates de e-mail sem utilização identificada;
+- dependências que não eram utilizadas pelo backend atual.
+
+Entre as dependências removidas foram citadas Flask, Selenium, bibliotecas de scraping, Pygame e Mercado Pago.
+
+**Importante:** a remoção de rotas legadas não deve ser interpretada como remoção das funcionalidades equivalentes que permanecem disponíveis na API ativa.
+
+### Atualização da autenticação no backend
+
+O fluxo de refresh token foi removido do backend.
+
+O login convencional e o login com Google passaram a retornar apenas access token.
+
+Os access tokens passaram a ser identificados com `type=access`, e tokens de outros tipos não devem autenticar usuários em rotas protegidas.
+
+### Melhorias de segurança
+
+A revisão incluiu:
+
+- exigência de permissão administrativa para upload de imagens de produtos;
+- validação do tipo de token utilizado nas rotas protegidas;
+- redução da exposição de detalhes internos do Supabase nas respostas de erro.
+
+Essas alterações reforçam os controles de acesso e reduzem a exposição desnecessária de informações internas.
+
+### Integridade dos dados
+
+Foram adicionadas ou reforçadas validações no banco de dados para evitar situações como:
+
+- quantidades negativas;
+- preços negativos;
+- mais de um endereço padrão quando a regra exigir unicidade;
+- mais de um método de pagamento padrão quando a regra exigir unicidade.
+
+As restrições devem ser consideradas nos testes de integração e regressão do sistema.
+
 ## Validação atual
 
 | Fluxo | Status | Observação |
 |---|---|---|
-| Frontend | Consistente para demonstração | A checagem TypeScript passou sem erros |
-| Cadastro e login | Parcial | Existem no frontend e no backend, mas o contrato de resposta ainda precisa ser ajustado |
-| Perfil e acesso admin | Parcial | A tela existe, mas os dados de perfil/permissão precisam estar alinhados com o backend |
-| Endereço e produto admin | Parcial | Existem telas e rotas, mas falta validação integrada |
-| Checkout, pedido e pagamento | Parcial | O fluxo visual existe, mas ainda não fecha compra real de ponta a ponta |
-| Backend | Em revisão | Ainda precisa de ambiente validado, correção técnica e consolidação de rotas |
+| Estrutura do Frontend | Implementada e revisada | Remoção de componentes e dependências sem utilização identificada |
+| Autenticação | Atualizada | Fluxo simplificado para access token; verificar evidências dos cenários de login e expiração |
+| Proteção administrativa | Reforçada | Upload de imagem passou a exigir permissão administrativa |
+| Estrutura do Backend | Revisada | Rotas experimentais e estruturas legadas removidas |
+| Integridade dos dados | Reforçada | Restrições para valores negativos e registros padrão |
+| Checkout, pedido e pagamento | Implementação existente | Manter validação integrada com pedidos e estoque |
+| Estoque | Parcialmente consolidado | Confirmar movimentações automáticas de saída, cancelamento e devolução |
 
 ## Pontos de atenção
 
-- a loja está boa para demonstração, mas ainda não está pronta para operação comercial real;
-- parte do frontend ainda usa dados locais no catálogo;
-- cadastro, login, perfil e admin precisam de contrato final entre frontend e backend;
-- endereço e cadastro de produto precisam ser validados em uso real;
-- checkout, pedido, pagamento e baixa de estoque ainda não estão comprovados como fluxo completo;
-- o backend tem duas estruturas de rota e precisa escolher uma versão oficial;
-- os testes automatizados precisam ser atualizados para refletir o estado atual da aplicação.
+Após a reorganização do backlog, as principais pendências a acompanhar são:
+
+- alinhar o contrato de produto entre frontend e backend;
+- consolidar o CRUD oficial de catálogo/produtos no backend, conforme o estado das rotas ativas;
+- integrar a gestão de estoque ao frontend administrativo;
+- integrar a gestão de fornecedores ao frontend administrativo;
+- integrar o vínculo entre fornecedores e produtos no frontend;
+- finalizar e validar as movimentações automáticas de estoque no checkout, incluindo saída e devolução quando aplicável;
+- implementar o fluxo de frete;
+- registrar testes de regressão após a limpeza técnica;
+- confirmar a decisão de escopo sobre o Routine Builder.
 
 ## Recursos previstos mas ainda não implementados
 
@@ -88,10 +178,11 @@ Os itens abaixo aparecem nos planos de projeto e permanecem como backlog:
 
 ## Próximos passos recomendados
 
-- definir a API oficial do backend;
-- alinhar os contratos entre frontend e backend;
-- conectar catálogo público à API real;
-- validar cadastro, login, perfil, endereço e produto administrativo em ambiente integrado;
-- validar checkout, pedido, pagamento e estoque de ponta a ponta;
-- atualizar os testes e registrar evidências funcionais;
-- priorizar a consolidação do MVP antes de adicionar novas funcionalidades.
+- registrar os PRs e commits das atualizações técnicas;
+- revisar os contratos de integração entre frontend e backend;
+- validar os fluxos de autenticação após a remoção do refresh token;
+- executar testes de regressão nas funcionalidades afetadas pela limpeza;
+- validar as regras de segurança e integridade dos dados;
+- concluir a integração administrativa de estoque e fornecedores;
+- validar checkout, pagamento e movimentações de estoque de ponta a ponta;
+- manter os Projects alinhados ao estado real da implementação.
