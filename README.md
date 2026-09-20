@@ -39,6 +39,7 @@ A leitura dos commits mostra a seguinte distribuição histórica:
 - **Gabriel Soares:** contribuições em navegação e endereço;
 - **João Pedro:** contribuições em tema e acessibilidade;
 - **Matheus Musashi:** correções de segurança e dependências no backend.
+- **Felipe Rodrigues:** contribuições na integração do checkout com Stripe e no controle de estoque.
 
 Também há contribuições anteriores relevantes de **Gustavo Henrique** no backend e de **João Gabriel** na busca. Ambos não fazem mais parte do grupo atual.
 
